@@ -1,6 +1,6 @@
 class Ticket
   def date
-  	'04.06.2021'
+    '04.06.2021'
   end
 
   def price
