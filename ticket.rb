@@ -4,19 +4,19 @@ class Ticket
   end
 
   def price
-  	3500
+    3500
   end
 
   def name_film
-  	'Трудно быть рубистом'
+    'Трудно быть рубистом'
   end
 
   def seat
-  	12
+    12
   end	
 
   def row
-  	4
+    4
   end
 end
 
