@@ -1,3 +1,3 @@
 puts 'Привет \' Семён '
-print 'Как дела \r\n' 
-print \r\n
+print "Как дела \n Всё хорошо"
+# print \r\n
