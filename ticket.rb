@@ -12,11 +12,11 @@ class Ticket
   end
 
   def seat
-    12
+    '12'
   end	
 
   def row
-    4
+    '4'
   end
 end
 
@@ -24,5 +24,5 @@ ticket = Ticket.new
 p 'Дата фильма: ' + ticket.date
 p 'Стоимость фильма: ' + ticket.price.to_s
 p 'Название фильма: ' + ticket.name_film
-p 'Место: ' + ticket.seat.to_s
-p 'Ряд: ' + ticket.row.to_s
+p 'Место: ' + ticket.seat
+p 'Ряд: ' + ticket.row
