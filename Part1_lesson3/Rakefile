@@ -1,0 +1,3 @@
+task :load do
+  puts 'Hello, world!'
+end
