@@ -7,6 +7,7 @@ end
 h = Hello.new
 o = Object.new
 h.greeting
+n = 5
 
 binding.irb
 
