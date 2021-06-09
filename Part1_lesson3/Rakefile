@@ -1,3 +1,7 @@
+desc 'Задача по умолчанию'
+task default: :load
+
+desc 'Вывод фразы Hello, world!'
 task :load do
   puts 'Hello, world!'
 end
