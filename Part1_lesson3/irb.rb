@@ -11,4 +11,5 @@ n = 5
 
 binding.irb
 
-o.greeting
+m = 6
+# o.greeting
