@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 desc 'Задача по умолчанию'
 task default: 'test:load'
 
 namespace :test do
   desc 'Вывод фразы Hello, world!'
   task :load do
-  puts 'Hello, world!'
+    puts 'Hello, world!'
   end
 end
 

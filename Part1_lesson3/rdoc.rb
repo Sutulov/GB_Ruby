@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # Класс билета в кино
 class Ticket
@@ -8,7 +10,7 @@ class Ticket
   #
   #    t = Ticket.new
   #    t.price
-  def price(name)
+  def price(_name)
     puts 3500
   end
 end
