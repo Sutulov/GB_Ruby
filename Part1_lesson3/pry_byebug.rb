@@ -2,6 +2,7 @@
 
 require 'pry-byebug' # <= Подключаем гем
 
+# Класс билета
 class Ticket
   def price
     puts 3500
@@ -10,9 +11,6 @@ end
 
 t = Ticket.new
 o = Object.new
-t.price
-
-binding.pry # <= Точка остановки
 
 t.price
 o.price
