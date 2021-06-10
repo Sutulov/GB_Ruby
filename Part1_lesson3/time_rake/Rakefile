@@ -1,0 +1,11 @@
+# frozen_string_literal: true
+
+desc 'Задача по умолчанию'
+task default: 'time:load'
+namespace :time do
+  date_now = Time.new
+  desc 'Вывод текущей даты и времени'
+  task :load do
+    puts date_now.localtime
+  end
+end
