@@ -23,8 +23,4 @@ class User
     'Программист'
   end
 end
-
-user1 = User.new
-print 'Пользователь: ' + user1.fio
-print 'Работает по профессии: ' + user1.profession
  
