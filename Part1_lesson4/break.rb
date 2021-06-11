@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class Integer
-  def +(number)
-  	'not good'
+  def +(_other)
+    'not good'
   end
 end
 

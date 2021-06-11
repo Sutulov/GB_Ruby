@@ -1,6 +1,8 @@
-str = <<here
+# frozen_string_literal: true
+
+str = <<HERE
       Проверка строк heredoc.
       Это новый способ создания
       строк!!! #{2 + 2}
-here
+HERE
 puts str
