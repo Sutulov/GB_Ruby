@@ -1,8 +1,8 @@
 class Integer
   def +(number)
-  	-(number)
+  	'not good'
   end
 end
 
-puts (2 + 2).class
+puts 2 + 2
 puts 3000 + 600
