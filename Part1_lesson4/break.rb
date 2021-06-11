@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Проверка изменения класса Integer
 class Integer
   def +(_other)
     'not good'
