@@ -1,11 +1,11 @@
 class User
-	def name
-		'Иванов Иван Иваныч'
-	end
+  def name
+    'Иванов Иван Иваныч'
+  end
 
-	def age
-		21
-	end
+  def age
+    21
+  end
 end
 
 u = User.new
