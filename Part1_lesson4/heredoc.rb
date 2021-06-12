@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-str = <<-here
+str = <<~here
       Проверка строк heredoc.
       Это новый способ создания
       строк!!! #{2 + 2}
