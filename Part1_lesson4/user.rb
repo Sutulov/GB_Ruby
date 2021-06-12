@@ -10,9 +10,15 @@ class User
   def job
     true
   end
+
+  def greed
+    0..1000
+  end
 end
 
 u = User.new
-puts "ФИО: #{u.name}"
-puts "Возраст: #{u.age}"
-puts "Наличие работы: #{u.job}"
+# puts "ФИО: #{u.name}"
+# puts "Возраст: #{u.age}"
+# puts "Наличие работы: #{u.job}"
+puts "Допустима ли цена в 500 рублей: #{u.greed.include? 500}"
+puts "Допустима ли цена в 3500 рублей: #{u.greed.include? 3_500}"
