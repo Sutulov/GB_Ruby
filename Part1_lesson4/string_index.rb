@@ -8,4 +8,4 @@ puts str
 str[7..8] = ''
 puts str
 str.sub('Иван', 'Пётр')
-str.пsub('Иван', 'Пётр')
+str.gsub('Иван', 'Пётр')
