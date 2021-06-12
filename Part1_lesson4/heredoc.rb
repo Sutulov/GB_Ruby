@@ -6,3 +6,4 @@ str = <<~here
       строк!!! #{2 + 2}
       here
 puts str
+
