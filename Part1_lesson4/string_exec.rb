@@ -1,1 +1,3 @@
-puts `dir`
+# puts `dir`
+
+puts %x(dir)
