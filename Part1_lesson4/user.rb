@@ -6,8 +6,13 @@ class User
   def age
     21
   end
+
+  def job
+    true
+  end
 end
 
 u = User.new
 puts "ФИО: #{u.name}"
 puts "Возраст: #{u.age}"
+puts "Наличие работы: #{u.job}"
