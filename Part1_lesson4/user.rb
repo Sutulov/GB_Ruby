@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Класс определяющий посетителя кинотеатра
 class User
   def name
     'Иванов Иван Иваныч'

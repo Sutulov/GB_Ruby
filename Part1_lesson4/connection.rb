@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 str1 = 'hello'
 str2 = 'world'
 str3 = str1.concat(' ' << str2)

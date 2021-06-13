@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 # puts `dir`
 
-puts %x(dir)
+puts `dir`
 
 # `dir`

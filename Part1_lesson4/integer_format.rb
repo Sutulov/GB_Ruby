@@ -1,4 +1,6 @@
-puts 200000000 + 88455555
+# frozen_string_literal: true
+
+puts 200_000_000 + 88_455_555
 puts 200_000_000 + 88_455_555
 puts 0b1010101
 puts '0xff'

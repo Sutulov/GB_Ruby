@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 str = 'Иванов Иван'
-puts str[4] 
+puts str[4]
 puts str.size
 puts str.length
 puts str[-4..-2]
