@@ -1,5 +1,4 @@
 # frozen_string_literal: true
 
 colors = %w[Красный Оранжевый Жёлтый Зелёный Голубой Синий Фиолетовый]
-r = Random.new
-puts "Сучайный элемент массива: #{colors[r.rand(6)]}"
+puts "Сучайный элемент массива: #{colors[rand(colors.size - 1)]}"
