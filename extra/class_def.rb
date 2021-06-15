@@ -13,3 +13,4 @@ end
 g = Greeter.new('Pat')
 g.say_hi
 g.say_bye
+g.@name
