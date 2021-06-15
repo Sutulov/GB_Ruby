@@ -8,9 +8,10 @@ class Greeter
   def say_bye
     puts "Bye #{@name}, come back soon."
   end
+  attr_accessor :name
 end
 
-g = Greeter.new('Pat')
+g = Greeter.new('Andy')
 g.say_hi
 g.say_bye
 # g.@name
@@ -18,3 +19,7 @@ g.say_bye
 puts "g.respond_to?('name') #{g.respond_to?('name')}"
 puts "g.respond_to?('say_hi') #{g.respond_to?('say_hi')}"
 puts "g.respond_to?('to_s') #{g.respond_to?('to_s')}"
+g.name = 'Betty'
+puts g
+puts g.name
+g.say_hi
