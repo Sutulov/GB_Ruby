@@ -15,9 +15,6 @@ g.say_hi
 g.say_bye
 # g.@name
 # puts Greeter.instance_methods(false)
-puts 'g.respond_to?('name')'
-g.respond_to?('name')
-puts "g.respond_to?('say_hi')"
-g.respond_to?('say_hi')
-puts "g.respond_to?('to_s')"
-g.respond_to?('to_s')
+puts "g.respond_to?('name') #{g.respond_to?('name')}"
+puts "g.respond_to?('say_hi') #{g.respond_to?('say_hi')}"
+puts "g.respond_to?('to_s') #{g.respond_to?('to_s')}"
