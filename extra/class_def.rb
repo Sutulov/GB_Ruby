@@ -14,4 +14,4 @@ g = Greeter.new('Pat')
 g.say_hi
 g.say_bye
 # g.@name
-puts Greeter.instance_methods
+puts Greeter.instance_methods(false)
