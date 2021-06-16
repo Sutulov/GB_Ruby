@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Класс кторый приветствует всех.
 class MegaGreeter
   attr_accessor :names
 
@@ -26,15 +29,14 @@ class MegaGreeter
       puts '...'
     elsif @names.respond_to?('join')
       # Join the list elements with commas
-      puts "Goodbye #{@names.join(", ")}. Come back soon!"
+      puts "Goodbye #{@names.join(', ')}. Come back soon!"
     else
       puts "Goodbye #{@names}. Come back soon!"
     end
   end
+end
 
- end
-
-if __FILE__ == $0
+if __FILE__ == $PROGRAM_NAME
   mg = MegaGreeter.new
   mg.say_hi
   mg.say_bye
@@ -45,7 +47,7 @@ if __FILE__ == $0
   mg.say_bye
 
   # Change the name to an array of names
-  mg.names = %w(Albert Brenda Charles Dave Engelbert)
+  mg.names = %w[Albert Brenda Charles Dave Engelbert]
   mg.say_hi
   mg.say_bye
 
@@ -54,5 +56,3 @@ if __FILE__ == $0
   mg.say_hi
   mg.say_bye
 end
-
-    	
