@@ -13,4 +13,4 @@ $x = 'переменная из голобальной области видим
 puts $x
 start
 puts $x
-puts local_variables
+puts global_variables
