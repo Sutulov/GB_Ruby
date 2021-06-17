@@ -1,18 +1,15 @@
+# frozen_string_literal: true
+
+# Класс определяющий точку
 class Point
   def set_x(x)
-  	@x = x
+    @x = x
   end
-  
-  def x
-    @x
-  end
+
+  attr_reader :x, :y
 
   def set_y(y)
     @y = y
-  end
-
-  def y
-    @y
   end
 end
 

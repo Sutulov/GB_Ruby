@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def say_bye
   x = 'переменная х из say_bye'
 end

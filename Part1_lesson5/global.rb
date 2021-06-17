@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 $LOAD_PATH << '.'
 def say_bye
   $x = 'переменная $х из say_bye'
@@ -15,4 +17,4 @@ puts $x
 start
 puts $x
 # puts $LOAD_PATH
-puts $:
+puts $LOAD_PATH

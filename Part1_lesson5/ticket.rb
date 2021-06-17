@@ -1,17 +1,15 @@
+# frozen_string_literal: true
+
+# Класс билета в кино
 class Ticket
   def set_date(date)
     @date = date
   end
 
-  def date
-    @date
-  end
+  attr_reader :date, :price
 
-  def price
-    @price
-  end
   def set_price(price)
-  @price = price
+    @price = price
   end
 end
 

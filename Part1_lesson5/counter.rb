@@ -1,12 +1,15 @@
+# frozen_string_literal: true
+
+# Класс пользователь
 class User
   @@counter = 0
 
   def initialize
-    @@counter = @@counter + 1
+    @@counter += 1
   end
 
   def counter
-  @@counter
+    @@counter
   end
 end
 
