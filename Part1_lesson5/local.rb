@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 def say_bye
-  x = 'переменная х из say_bye'
+  _x = 'переменная х из say_bye'
 end
 
 def start

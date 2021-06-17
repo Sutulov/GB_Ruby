@@ -14,6 +14,6 @@ class User
 end
 
 first = User.new
-second = User.new
-third = User.new
+_second = User.new
+_third = User.new
 puts "Новый объект был создан #{first.counter} раз."
