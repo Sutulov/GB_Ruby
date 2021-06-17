@@ -1,3 +1,4 @@
+$LOAD_PATH << '.'
 def say_bye
   $x = 'переменная $х из say_bye'
 end
@@ -13,4 +14,5 @@ $x = 'переменная из голобальной области видим
 puts $x
 start
 puts $x
-puts global_variables
+# puts $LOAD_PATH
+puts $:
