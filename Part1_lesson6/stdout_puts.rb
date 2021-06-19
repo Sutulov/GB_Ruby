@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'stringio'
 
 $stdout = StringIO.new
@@ -5,4 +7,4 @@ $stdout = StringIO.new
 puts 'Hello, world!'
 File.write('output.log', $stdout.string)
 
-STDOUT.puts 'Hello, Ruby!'
+$stdout.puts 'Hello, Ruby!'
