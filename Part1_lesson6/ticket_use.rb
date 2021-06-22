@@ -1,9 +1,14 @@
 require 'date'
 require_relative './lib/ticket'
+require_relative './lib/user'
 
 ticket = Ticket.new
 ticket.set_name('Иванов Иван Иванович')
 ticket.set_date(Date.new(2021, 10, 30))
 
-puts ticket.name
-puts ticket.date
+user = User.new
+user.set_name('Иванов Иван Иванович')
+user.set_ticket(ticket)
+
+puts user.name
+puts user.ticket.date
