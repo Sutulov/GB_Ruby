@@ -1,5 +1,7 @@
-class Ticket
+# frozen_string_literal: true
 
+# Класс билет
+class Ticket
   attr_accessor :name, :date
 
   def set_name(name)

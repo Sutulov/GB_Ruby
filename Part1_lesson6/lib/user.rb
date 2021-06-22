@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
+# Класс пользователь
 class User
-  
   attr_accessor :name, :ticket
 
   def set_name(name)

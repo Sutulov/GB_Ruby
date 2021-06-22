@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
+# Класс проверки билетов
 class Controller
   def check(user)
-    @user = user	
+    @user = user
     if user.ticket
       puts 'Билет в наличие'
       check_name
@@ -17,7 +20,7 @@ class Controller
       puts 'Билет на чужое имя'
     end
   end
-  
+
   def check_date
     if @user.ticket.date == Date.today
       puts 'Билет на сегодняшнюю дату'
