@@ -1,2 +1,2 @@
-require_relative 'ticket'
+require './lib/ticket'
 p Ticket.new
