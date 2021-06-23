@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Класс приветствия
 class Hello
   def hello
@@ -8,7 +10,7 @@ class Hello
     elsif Time.new.hour >= 6
       puts 'Доброе утро'
     else
-      puts 'Доброй ночи' 
+      puts 'Доброй ночи'
     end
   end
 end

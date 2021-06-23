@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 puts 'Введите число '
 number = gets.chomp.to_i
 if number.even?

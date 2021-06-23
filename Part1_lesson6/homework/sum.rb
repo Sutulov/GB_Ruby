@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 sum = 0
 puts 'Введите числа:'
 numbers = gets.chomp
