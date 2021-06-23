@@ -1,4 +1,6 @@
-puts "Стоимость %d рублей" % 500
+# frozen_string_literal: true
+
+puts format('Стоимость %d рублей', 500)
 
 number = 4597
 
