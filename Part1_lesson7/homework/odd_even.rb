@@ -1,6 +1,6 @@
 print 'Введите целое число: '
-number = gets.chomp.to_i
-if number.even?
+number = gets.to_i
+if (number & 1).zero?
   puts "#{number} чётное число."
 else
   puts "#{number} не чётное число."
