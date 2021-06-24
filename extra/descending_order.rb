@@ -1,12 +1,12 @@
-def descending_order(num)
-  num.to_s
+def descending_order(n)
+  n.to_s
   arr = []
-  (0..num.size-1).each do |i|
-    arr.push(num[i])
+  (0..n.size-1).each do |i|
+    arr.push(n[i])
   end
   str = ''
   arr.sort.reverse.each do |i|
     str << i
   end
-  return str
+  return str.to_i
 end
