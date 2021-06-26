@@ -2,7 +2,7 @@
 
 # Класс цвета радуги
 class Colors
-  def find(num)
+  def find_right(num)
     case num
     when 1 then 'красный'
     when 2 then 'оранжевый'
