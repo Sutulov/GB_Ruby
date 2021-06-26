@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
+# Класс дней недали
 class Week
-  def find_right(num)
+  def find(num)
     arr = %w[Понедельник Вторник Среда Четверг Пятница Суббота Воскресенье].freeze
-    if (1..7) === num 
-      arr[num - 1]
-    end
+    arr[num - 1] if (1..7).include?(num)
   end
 end
