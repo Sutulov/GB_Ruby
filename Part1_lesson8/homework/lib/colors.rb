@@ -8,7 +8,6 @@ class Colors
       when 5 then 'голубой'
       when 6 then 'синий'
       when 7 then 'фиолетовый'
-      else nil
     end
   end
 end
