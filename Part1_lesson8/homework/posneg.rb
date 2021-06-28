@@ -1,5 +1,5 @@
 print 'Введите число: '
-number = gets
+number = gets.chomp
 puts (if  number.to_i.to_s != number && number.to_f.to_s != number
         'Это не число!'
       elsif number[0] != '-'
