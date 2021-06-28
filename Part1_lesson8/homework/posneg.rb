@@ -1,6 +1,6 @@
 print 'Введите число: '
-number = gets.chomp
-puts (if  input.to_i.to_s != input && input.to_f.to_s != input
+number = gets
+puts (if  number.to_i.to_s != number && number.to_f.to_s != number
         'Это не число!'
       elsif number[0] != '-'
         'Положительное число'
