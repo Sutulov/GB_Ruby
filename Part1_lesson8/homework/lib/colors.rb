@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 # Класс цвета радуги
+# Rubocop ругается, но хотелось попробывать в деле case
 class Colors
   def find_right(num)
     case num
