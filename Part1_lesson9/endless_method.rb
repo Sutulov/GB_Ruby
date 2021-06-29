@@ -1,2 +1,2 @@
-def convert = 5 * 1000
-puts convert
+def convert(num) = num * 1000
+puts convert(6)
