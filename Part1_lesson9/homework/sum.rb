@@ -1,4 +1,5 @@
 def sum(*params)
-  params.map(&:to_i).sum
+  params.sum
 end
-puts sum(*ARGV)
+
+puts sum(*ARGV.map(&:to_i))
