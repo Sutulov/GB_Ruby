@@ -1,7 +1,4 @@
 def sum(*params)
-  params.sum
+  params.map(&:to_i).sum
 end
-
-print 'Введите числовые аргументы: '
-number = gets.chomp
-puts sum(1, 5, 6)
+puts sum(*ARGV)
