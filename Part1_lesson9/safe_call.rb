@@ -1,6 +1,8 @@
 object = Object.new
 another = Object.new
 another = nil
+p another.class
+p object.class
 
 def object.convert(value:, factor: 1000)
   value * factor
