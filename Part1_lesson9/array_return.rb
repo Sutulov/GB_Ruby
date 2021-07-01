@@ -4,7 +4,7 @@ end
 
 p number(7)
 
-original, square, sqrt number(7)
+original, square, sqrt = number(7)
 puts original
 puts square
 puts sqrt
