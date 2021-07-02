@@ -9,3 +9,4 @@ user2 = User.new
 user3 = User.new
 arr = [user1, user2, user3]
 arr.each { |element| element.surname, element.name, element.snd_name = *element.query }
+puts "Имя второго пользователя - #{arr[1].name}"
