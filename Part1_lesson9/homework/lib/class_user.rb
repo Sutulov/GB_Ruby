@@ -1,9 +1,8 @@
 class User
-  def fio(surname, name, snd_name)
-    @surname = surname
-    @name = name
-    @snd_name = snd_name
-  end
+  attr_accessor :fio, :surname, :name, :snd_name
 
-  attr_reader :fio
+  def query
+    print 'Введите ФИО пользователя: '
+    (gets.chomp)
+  end
 end
