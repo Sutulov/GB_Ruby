@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def cel2far(cel)
   cel * 1.8 + 32
 end

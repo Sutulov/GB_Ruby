@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 def leap_year?(year)
-  if year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)
+  if (year % 4).zero? && (year % 100 != 0 || (year % 400).zero?)
     true
   else
     false

@@ -1,5 +1,7 @@
-def fibonacci(n)
-  ((((1 + 5**0.5) / 2) ** n) - (((1 - 5**0.5) / 2) ** n)) / 5**0.5
+# frozen_string_literal: true
+
+def fibonacci(num)
+  ((((1 + 5**0.5) / 2)**num) - (((1 - 5**0.5) / 2)**num)) / 5**0.5
 end
 
 print 'Введите число: '

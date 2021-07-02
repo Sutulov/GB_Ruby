@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Класс определяющий пользователя
 class User
   attr_accessor :surname, :name, :snd_name
 
