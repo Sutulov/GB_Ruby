@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 def convert(value, factor = nil)
   return value * 1000 unless factor
+
   value * factor
 end
 

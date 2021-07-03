@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 object = Object.new
-another = Object.new
+# another = Object.new Useless assignment to variable - another.
 
 def object.convert(value:, factor: 1000)
   value * factor

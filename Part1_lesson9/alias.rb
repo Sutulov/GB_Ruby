@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def convert(value:, factor: 1000)
   value * factor
 end

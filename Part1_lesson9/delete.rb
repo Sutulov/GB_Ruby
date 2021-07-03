@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def greeting(params)
   puts params.delete :first
   puts params.delete :second

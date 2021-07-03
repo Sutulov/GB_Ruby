@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 object = Object.new
 another = Object.new
 

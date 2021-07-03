@@ -1,5 +1,7 @@
-def number(x)
-  [x, x * x, x ** 0.5]
+# frozen_string_literal: true
+
+def number(num)
+  [num, num * num, num**0.5]
 end
 
 p number(7)
