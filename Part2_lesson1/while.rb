@@ -2,7 +2,7 @@ print 'Пожалуйста, введите количество повторо�
 max_iter = gets.to_i
 i = 0
 
-while i < max_iter
+while i < max_iter do
   puts 'Hello, world!'
   i += 1
 end
