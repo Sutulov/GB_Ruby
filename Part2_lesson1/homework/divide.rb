@@ -2,8 +2,5 @@ require_relative 'lib/inputs'
 
 puts 'Введите числитель: '
 numerator = gets.to_f
-begin
-  num = Input.new.denominator
-end while num <= 0 
-
+num = Input.new.denominator
 puts "#{numerator} / #{num} = #{(numerator / num).round(1)}"
