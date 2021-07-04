@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 print 'Введите количество повторов: '
 inter = gets.to_i
 i = 0
 
-begin
+loop do
   puts 'Hello, world!'
   i += 1
-end while i < inter
+  break unless i < inter
+end

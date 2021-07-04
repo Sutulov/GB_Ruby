@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
 today = Time.now
-med = 7 - (today.strftime "%u").to_i
-puts Array.new(7).map! { |day| med += 1; day = (today - (7 - med) * 86400).strftime "%d.%m.%Y"}
+med = 7 - (today.strftime '%u').to_i
+
+puts _arr = Array.new(7).map { |_day| _day = (today - (7 - (med += 1)) * 86_400).strftime '%d.%m.%Y' }

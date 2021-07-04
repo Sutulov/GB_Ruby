@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def multi_convert(values)
   i = 0
   while i < values.size

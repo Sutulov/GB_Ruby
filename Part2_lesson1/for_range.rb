@@ -1,3 +1,5 @@
-for num in 1..4
+# frozen_string_literal: true
+
+(1..4).each do |num|
   puts num
 end

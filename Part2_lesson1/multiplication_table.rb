@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 print 'Введите максимальное значение: '
 max_iter = gets.to_i
 i = 1

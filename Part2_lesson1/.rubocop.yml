@@ -1,6 +1,0 @@
-llCops:
-  TargetRubyVersion: 3.0.1
-  Exclide:
-    - 'tmp/**/*'
-Style/AsciiComments:
-  Enabled: false

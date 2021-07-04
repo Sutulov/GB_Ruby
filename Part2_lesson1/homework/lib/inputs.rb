@@ -1,15 +1,19 @@
+# frozen_string_literal: true
+
+# Class checks the denominator
 class Input
   def denominator
-    begin
+    loop do
       puts 'Введите знаменатель больше нуля: '
       num = gets.to_f
-    end while num <= 0 
+      break unless num <= 0
+    end
     num
   end
 
-  def denominator_2
+  def denomin
     puts 'Введите знаменатель больше нуля: '
     num = gets.to_f
-    num > 0 ? num : denominator_2
+    num.positive? ? num : denomin
   end
 end

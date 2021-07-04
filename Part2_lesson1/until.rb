@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 print 'Введите количество повторов: '
 max_iter = gets.to_i
 i = 0
