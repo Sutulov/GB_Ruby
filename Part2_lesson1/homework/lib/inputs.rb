@@ -3,6 +3,7 @@
 # Class checks the denominator
 class Input
   def denominator
+    num = 0
     loop do
       puts 'Введите знаменатель больше нуля: '
       num = gets.to_f
