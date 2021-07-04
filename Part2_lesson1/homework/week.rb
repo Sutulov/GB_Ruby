@@ -1,0 +1,1 @@
+puts today = Time.new
