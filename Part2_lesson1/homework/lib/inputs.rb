@@ -2,7 +2,7 @@
 
 # Class checks the denominator
 class Input
-  def denominator
+  def self.denominator
     num = 0
     loop do
       puts 'Введите знаменатель больше нуля: '
@@ -12,7 +12,7 @@ class Input
     num
   end
 
-  def denomin
+  def self.denomin
     puts 'Введите знаменатель больше нуля: '
     num = gets.to_f
     num.positive? ? num : denomin
