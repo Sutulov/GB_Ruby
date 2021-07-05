@@ -3,4 +3,4 @@
 today = Time.now
 med = 7 - (today.strftime '%u').to_i
 
-puts _arr = Array.new(7).map { |_day| _day = (today - (7 - (med += 1)) * 86_400).strftime '%d.%m.%Y' }
+puts _arr = Array.new(7).map { (today - (7 - (med += 1)) * 86_400).strftime '%d.%m.%Y' }
