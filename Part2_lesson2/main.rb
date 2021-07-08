@@ -19,6 +19,6 @@ session = {
   'Сидоров Сергей Владимирович' => 1100
 }
 
-users = session.map { |name, price| user(name, price) }
+users = session.map { |name, price| user(name, price) }.to_h
 
 p users
