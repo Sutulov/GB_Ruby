@@ -11,14 +11,16 @@ def user(name, price)
   [user, ticket]
 end
 
-users = { }
-
 session = {
   'Иванов Иван Иванович' => 1000,
   'Петров Пётр Петрович' => 1200,
   'Сидоров Сергей Владимирович' => 1100
 }
 
-users = session.map { |name, price| user(name, price) }.to_h
+users = session.each_with_object({}) do |(name, price), collection|
+          user, ticket = user(name, price)
+          collection[user] = ticket
+        end
 
-p users
+users.each { |user, ticket| puts user.name }
+puts users.values.map { |ticket| ticket.price }.sum
