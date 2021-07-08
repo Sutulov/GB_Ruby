@@ -19,9 +19,6 @@ session = {
   'Сидоров Сергей Владимирович' => 1100
 }
 
-session.each do |name, price|
-  user, ticket = user(name, price)
-  users[user] = ticket
-end
+users = session.map { |name, price| user(name, price) }
 
 p users
