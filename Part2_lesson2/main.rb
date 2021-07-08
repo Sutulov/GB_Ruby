@@ -23,4 +23,4 @@ users = session.each_with_object({}) do |(name, price), collection|
         end
 
 users.each { |user, ticket| puts user.name }
-puts users.values.map { |ticket| ticket.price }.sum
+puts users.reduce(0) { |sum, (user, ticket)| sum + ticket.price }
