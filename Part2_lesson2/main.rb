@@ -13,13 +13,15 @@ end
 
 users = { }
 
-user, ticket = user('Иванов Иван Иванович', 1000)
-users[user] = ticket
+session = {
+  'Иванов Иван Иванович' => 1000,
+  'Петров Пётр Петрович' => 1200,
+  'Сидоров Сергей Владимирович' => 1100
+}
 
-user, ticket = user('Петров Пётр Петрович', 1200)
-users[user] = ticket
-
-user, ticket = user('Сидоров Сергей Владимирович', 1100)
-users[user] = ticket
+session.each do |name, price|
+  user, ticket = user(name, price)
+  users[user] = ticket
+end
 
 p users
