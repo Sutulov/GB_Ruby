@@ -5,7 +5,7 @@ require_relative 'lib/general'
 colors = Colors.arr
 
 print "#{colors} \n"
-print "#{colors.reject { |str| str == '' }
+print "#{colors.reject { |str| str.eql?(' ') }
                .uniq
-               .reject { |str| str == 'stop' }
+               .reject { |str| str.eql?('stop') }
                .sort} \n"
