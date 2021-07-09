@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def hash_return(params)
   # params[:page] = 1
   # params

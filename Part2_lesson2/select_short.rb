@@ -1,2 +1,4 @@
-p [1, 2, 3, 4, 5].select { |x| x.even? }
+# frozen_string_literal: true
+
+p [1, 2, 3, 4, 5].select(&:even?)
 p [1, 2, 3, 4, 5].select(&:even?)

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'lib/ticket'
 require_relative 'lib/user'
 
@@ -18,9 +20,9 @@ session = {
 }
 
 users = session.each_with_object({}) do |(name, price), collection|
-          user, ticket = user(name, price)
-          collection[user] = ticket
-        end
+  user, ticket = user(name, price)
+  collection[user] = ticket
+end
 
-users.each { |user, ticket| puts user.name }
-puts users.reduce(0) { |sum, (user, ticket)| sum + ticket.price }
+users.each { |user, _ticket| puts user.name }
+puts users.reduce(0) { |sum, (_user, ticket)| sum + ticket.price }

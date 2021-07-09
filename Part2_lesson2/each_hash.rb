@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 rainbow = {
   red: 'красный',
   orange: 'оранжевый',
@@ -8,5 +10,4 @@ rainbow = {
   violet: 'фиолетовый'
 }
 
- rainbow.each { |key, name| puts "#{key}: #{name}" }
- 
+rainbow.each { |key, name| puts "#{key}: #{name}" }
