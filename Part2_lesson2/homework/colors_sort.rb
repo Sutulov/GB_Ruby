@@ -7,4 +7,8 @@ colors = colors.push(*check_color)
 break if check_color.include?('stop')
 end
 
-print "#{colors.reject { |str| str == 'stop' }} \n"
+print "#{colors} \n"
+print "#{colors.select { |str| str != ''}
+               .uniq
+               .reject { |str| str == 'stop' }
+               .sort} \n"
