@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'lib/general'
 
-puts ARR.map { |str| str.capitalize }
+puts ARR.map(&:capitalize)
