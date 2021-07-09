@@ -1,6 +1,26 @@
 ARR = %w[cat dog tiger].freeze
 WEEK = %w[Понедельник Вторник Среда Четверг Пятница Суббота Воскресенье].freeze
-MONTHS = %w[Январь Февраль Март Апрель Май Июнь Июль Август Сентябрь Октябрь Ноябрь Декабрь].freeze
+MONTHS = %w[Январь 
+            Февраль 
+            Март 
+            Апрель 
+            Май 
+            Июнь 
+            Июль 
+            Август 
+            Сентябрь 
+            Октябрь 
+            Ноябрь 
+            Декабрь].freeze
+
+PLANETS = {merciry: 330.2, 
+           venus: 4_868.5, 
+           earth: 5_974.2, 
+           mars: 641.85, 
+           jupiter: 1_899_000, 
+           saturn: 568_460, 
+           uranus: 86_832, 
+           neptune: 102_430 }.freeze
 
 class Colors
   def self.arr
