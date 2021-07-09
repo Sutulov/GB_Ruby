@@ -15,3 +15,12 @@ class Colors
     return colors
   end
 end
+
+class User
+  attr_accessor :surname, :name, :snd_name, :mark
+
+  def query
+    print 'Введите ФИО пользователя и его оценку через пробел: '
+    gets.split(/\s+/).map(&:to_s)
+  end
+end
