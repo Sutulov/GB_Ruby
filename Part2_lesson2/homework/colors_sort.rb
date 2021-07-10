@@ -2,7 +2,7 @@
 
 require_relative 'lib/general'
 
-puts "#{colors = Colors.arr}"
-puts "#{colors.reject { |str| str == ' ' }
-               .uniq
-               .sort}"
+puts (colors = Colors.arr).to_s
+puts colors.reject { |str| str == ' ' }
+           .uniq
+           .sort.to_s

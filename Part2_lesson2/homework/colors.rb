@@ -2,4 +2,4 @@
 
 require_relative 'lib/general'
 
-puts "#{Colors.arr}"
+puts Colors.arr.to_s

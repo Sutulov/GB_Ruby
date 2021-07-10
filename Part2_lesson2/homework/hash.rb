@@ -2,8 +2,5 @@
 
 require_relative 'lib/general'
 
-arr = PLANETS.map { |_key, hash| hash }.sort
-
-puts "Самые лёгкие: #{PLANETS.select { |_key, hash| hash < arr[3] }}"
-
-puts "Самые тяжёлые: #{PLANETS.select { |_key, hash| hash > arr[arr.size - 4] }}"
+puts "Самые лёгкие: #{PLANETS.sort_by { |_key, weight| weight }.take(3)}"
+puts "Самые тяжёлые: #{PLANETS.sort_by { |_key, weight| weight }.drop(PLANETS.size - 3)}"
