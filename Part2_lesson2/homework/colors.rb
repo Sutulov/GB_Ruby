@@ -2,6 +2,4 @@
 
 require_relative 'lib/general'
 
-colors = Colors.arr
-
-print "#{colors.reject { |str| str.eql?('stop') }} \n"
+puts "#{Colors.arr}"

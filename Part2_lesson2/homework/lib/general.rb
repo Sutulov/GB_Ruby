@@ -35,7 +35,7 @@ class Colors
       colors.push(*check_color)
       break if check_color.include?('stop')
     end
-    colors
+    colors.reject { |str| str == 'stop' }
   end
 end
 
@@ -46,5 +46,13 @@ class User
   def query
     print 'Введите ФИО пользователя и его оценку через пробел: '
     gets.split(/\s+/).map(&:to_s)
+  end
+
+  def self.average_user(arr_user)
+    average = arr_user.reduce(0) { |m, x| m + x.mark.to_i } / 10.0
+    arr_user.select { |user| user.mark.to_i > average.round }
+            .each do |user| 
+               yield [user.surname, user.name, user.snd_name, user.mark] 
+    end
   end
 end
