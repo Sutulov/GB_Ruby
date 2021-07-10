@@ -5,10 +5,10 @@ require_relative 'lib/user'
 
 def user(name, price)
   ticket = Ticket.new
-  ticket.set_price(price)
+  ticket.price = price
 
   user = User.new
-  user.set_name(name)
+  user.name = name
 
   [user, ticket]
 end

@@ -2,9 +2,5 @@
 
 # Class defining the user!
 class User
-  def set_name(name)
-    @name = name
-  end
-
-  attr_reader :name
+  attr_accessor :name
 end

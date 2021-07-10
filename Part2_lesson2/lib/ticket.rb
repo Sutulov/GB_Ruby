@@ -2,9 +2,5 @@
 
 # Class defining the ticket!
 class Ticket
-  def set_price(price)
-    @price = price
-  end
-
-  attr_reader :price
+  attr_accessor :price
 end
