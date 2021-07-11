@@ -1,7 +1,6 @@
 def my_loop
-  if block_given?
-    yield while true
-  end
+  return unless block_given?
+  yield while true
 end
 
 my_loop
