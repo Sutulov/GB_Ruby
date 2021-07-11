@@ -10,5 +10,5 @@ greeting do |fst, snd, thd, fth|
   p fst
   p snd
   p thd
-  p fst
+  p fth
 end
