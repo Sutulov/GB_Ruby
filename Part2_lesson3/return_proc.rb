@@ -6,3 +6,4 @@ def five(arr)
 end
 
 colors = %i[red orange yellow green blue indigo violet]
+five(colors) { |color| puts color }
