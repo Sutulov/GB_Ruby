@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 require_relative 'tree'
 
-def walk (tree = [], &block)
+def walk(tree = [], &block)
   tree.each do |x|
     case x
     when Hash
       x.each { |_dir, files| walk(files, &block) }
     when String
-      block.call (x)
+      block.call(x)
     end
   end
 end

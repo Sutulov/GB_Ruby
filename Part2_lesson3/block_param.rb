@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def my_loop
   n = 0
   yield n += 1

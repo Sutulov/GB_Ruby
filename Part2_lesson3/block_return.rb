@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def greeting
   name = block_given? ? yield : 'world'
   "Hello, #{name}!"

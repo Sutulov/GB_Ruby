@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require_relative 'tree'
 
-def walk (tree = [])
+def walk(tree = [])
   tree.each do |x|
     case x
     when Hash

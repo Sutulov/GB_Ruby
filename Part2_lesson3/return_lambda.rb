@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
 def five(arr)
-  lb = ->(el, i) do
+  lb = lambda do |el, i|
     return if i >= 5
+
     yield el
   end
   arr.each_with_index(&lb)

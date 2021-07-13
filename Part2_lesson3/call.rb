@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def greeting(&block)
   block.call 'Ruby'
 end

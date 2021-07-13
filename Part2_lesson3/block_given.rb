@@ -1,6 +1,9 @@
-def my_loop
+# frozen_string_literal: true
+
+def my_loop(&block)
   return unless block_given?
-  yield while true
+
+  loop(&block)
 end
 
 my_loop

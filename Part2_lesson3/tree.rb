@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 TREE = [
   'index.rb',
   {
     'src' => [
       'file01.rb',
       'file02.rb',
-      'file03.rb',
+      'file03.rb'
     ]
   },
   {
@@ -20,4 +22,4 @@ TREE = [
       }
     ]
   }
-]
+].freeze
