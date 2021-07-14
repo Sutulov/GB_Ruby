@@ -1,7 +1,7 @@
 require 'date'
 
-day = Date.new
-p day.strftime('%a %d %b %Y')
+day = Date.today.strftime('%a %d %b %Y')
+p day
 def weekends
 
 end
