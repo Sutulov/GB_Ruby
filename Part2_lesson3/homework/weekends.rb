@@ -1,6 +1,6 @@
 require 'date'
 
-day = Date.today.strftime('%a %d %b %Y')
+day = (Date.today + 7).strftime('%a %d %b %Y') 
 p day
 def weekends
 
