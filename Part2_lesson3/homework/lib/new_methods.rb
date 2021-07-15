@@ -1,8 +1,10 @@
 class Array
   def my_map
+    new = []
     self.each do |i|
-      yield i
+      new << (yield i)
     end
+    new
   end
 end
 
