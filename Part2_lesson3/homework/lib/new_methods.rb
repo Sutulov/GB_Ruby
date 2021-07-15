@@ -24,4 +24,17 @@ class Array
     end
     num
   end
+
+  def walk(&block)
+    each do |i|
+      case i
+      when String
+        block.call(i)
+      when Integer
+        block.call(i)
+      when Array
+        i.walk(&block)
+      end
+    end
+  end
 end
