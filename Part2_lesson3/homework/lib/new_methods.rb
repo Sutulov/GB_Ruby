@@ -16,6 +16,8 @@ end
 
 class Array
   def my_reduce
-    yield self
+    self.each do |i|
+      yield i
+    end
   end
 end
