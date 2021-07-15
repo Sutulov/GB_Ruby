@@ -1,5 +1,3 @@
-def my_map
-  yield
-end
+require_relative 'lib/new_methods'
 
-(1..5).my_map { |i| puts i }
+[1, 2, 3, 4, 5].my_map { |i| puts i }
