@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'date'
 
 DAY = 86_400
-ARR = [[[1, 2], 3], [4, 5, 6], [7, [8, 9]], ['fds', 's', [1, ['df', 2]]]]
+ARR = [[[1, 2], 3], [4, 5, 6], [7, [8, 9]], ['fds', 's', [1, ['df', 2]]]].freeze
 
 class Days
   def self.week(n)
@@ -11,8 +13,8 @@ class Days
   end
 
   def self.weekends
-    day = Date.new(2021,1,1)
-    while day != Date.new(2022,1,1) do
+    day = Date.new(2021, 1, 1)
+    while day != Date.new(2022, 1, 1)
       yield day.strftime('%a %d %b %Y') if day.saturday? || day.sunday?
       day += 1
     end
