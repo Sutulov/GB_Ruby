@@ -18,10 +18,10 @@ class Array
     new
   end
 
-  def my_reduce(m = first)
+  def my_reduce(num = first)
     each do |i|
-      m = yield m, i
+      num = yield num, i
     end
-    m
+    num
   end
 end

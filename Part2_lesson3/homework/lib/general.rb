@@ -25,7 +25,7 @@ end
 # Class work with array
 class Arr
   def self.walk(arr)
-    yield arr.map { |i| *i }
+    yield arr.map { |i| i * i }
   end
 end
 
