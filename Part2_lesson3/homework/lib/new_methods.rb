@@ -1,12 +1,16 @@
 class Array
   def my_map
-    yield self
+    self.each do |i|
+      yield i
+    end
   end
 end
 
 class Array
   def my_select
-    yield self
+    self.each do |i|
+      yield i
+    end
   end
 end
 
