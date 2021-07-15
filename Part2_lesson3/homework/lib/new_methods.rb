@@ -17,8 +17,7 @@ class Array
 end
 
 class Array
-  def my_reduce
-    m = self.first
+  def my_reduce(m = self.first)
     self.each do |i|
       m = yield m, i
     end
