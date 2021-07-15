@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Class for open class Array
 class Array
   def my_map
     new = []
@@ -8,9 +9,7 @@ class Array
     end
     new
   end
-end
 
-class Array
   def my_select
     new = []
     each do |i|
@@ -18,9 +17,7 @@ class Array
     end
     new
   end
-end
 
-class Array
   def my_reduce(m = first)
     each do |i|
       m = yield m, i
