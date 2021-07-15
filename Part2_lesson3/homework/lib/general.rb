@@ -1,7 +1,7 @@
 require 'date'
 
 DAY = 86_400
-ARR = [[[1, 2], 3], [4, 5, 6], [7, [8, 9]]]
+ARR = [[[1, 2], 3], [4, 5, 6], [7, [8, 9]], ['fds', 's', [1, ['df', 2]]]]
 
 class Days
   def self.week(n)
