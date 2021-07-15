@@ -20,10 +20,8 @@ class Array
   def my_reduce
     m = self.first
     self.each do |i|
-      yield begin
-        m += i 
-        i + 5
-      end
+      m = yield m, i
     end
+    m
   end
 end
