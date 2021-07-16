@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 require_relative 'lib/week'
 
 new_week = Week.new
 
-puts new_week.each { |i| i }
+new_week.each { |i| puts i }

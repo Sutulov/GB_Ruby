@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Class for factory
 class Factory
   @@counter_teddy_bear = 0
   @@counter_ball = 0
@@ -7,13 +10,13 @@ class Factory
   def self.build(toy)
     @@counter_toys += 1
     case toy
-    when toy = :teddy_bear
+    when :teddy_bear
       @teddy_bear = TeddyBear.new
       @@counter_teddy_bear += 1
-    when toy = :ball
+    when :ball
       @ball = Ball.new
       @@counter_ball += 1
-    when toy = :cube
+    when :cube
       @cube = Cube.new
       @@counter_cube += 1
     end
@@ -24,20 +27,18 @@ class Factory
   end
 
   def self.offers
-    hash ={teddy_bear: @@counter_teddy_bear, ball: @@counter_ball, cube: @@counter_cube}
+    { teddy_bear: @@counter_teddy_bear, ball: @@counter_ball, cube: @@counter_cube }
   end
 
+  # Class creating toy of teddy bear
   class TeddyBear
-
   end
 
+  # Class creating toy of ball
   class Ball
-
   end
 
+  # Class creating toy of cube
   class Cube
-
   end
-
-
 end

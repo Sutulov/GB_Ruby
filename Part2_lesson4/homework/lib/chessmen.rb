@@ -1,5 +1,7 @@
-class Chessmen
+# frozen_string_literal: true
 
+# Class describing of chessmen
+class Chessmen
   def name
     'Слон'
   end

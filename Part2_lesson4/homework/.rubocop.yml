@@ -1,0 +1,8 @@
+AllCops:
+  TargetRubyVersion: 3.0.2
+  Exclide:
+    - 'tmp/**/*'
+Style/ClassVars:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
