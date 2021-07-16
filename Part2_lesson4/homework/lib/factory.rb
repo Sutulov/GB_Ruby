@@ -11,14 +11,14 @@ class Factory
     @@counter_toys += 1
     case toy
     when :teddy_bear
-      @teddy_bear = TeddyBear.new
       @@counter_teddy_bear += 1
+      @teddy_bear = TeddyBear.new
     when :ball
-      @ball = Ball.new
       @@counter_ball += 1
+      @ball = Ball.new
     when :cube
-      @cube = Cube.new
       @@counter_cube += 1
+      @cube = Cube.new
     end
   end
 
