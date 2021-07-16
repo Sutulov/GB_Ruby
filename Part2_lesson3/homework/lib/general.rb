@@ -5,13 +5,13 @@ require 'date'
 DAY = 86_400
 DAYS_OF_WEEK = 7
 ARR = [[[1, 2], 3], [4, 5, 6], [7, [8, 9]], ['fds', 's', [1, ['df', 2]]]].freeze
+CORRECTIVE = DAYS_OF_WEEK - Date.new(Time.now.year).strftime('%u').to_i + 2
 
 # Class work with days
 class Days
   def self.week(num)
     today = Time.now
-    corrective = DAYS_OF_WEEK - (Date.new(Time.now.year).strftime('%u')).to_i + 2
-    med = (today.strftime '%j').to_i - num * DAYS_OF_WEEK + corrective
+    med = (today.strftime '%j').to_i - num * DAYS_OF_WEEK + CORRECTIVE
     yield Array.new(DAYS_OF_WEEK).map { (today - (med -= 1) * DAY).strftime '%d.%m.%Y' }
   end
 
@@ -33,10 +33,15 @@ end
 
 # Class math farmulas
 class Formula
-  def self.fibonacci(number)
+  def self.formula_binet(number)
     (0..number).map do |num|
-      yield (((((1 + 5**0.5) / 2)**num) - (((1 - 5**0.5) / 2)**num)) / 5**0.5).to_i
+      a = (((1 + 5**0.5) / 2)**num)
+      b = (((1 - 5**0.5) / 2)**num)
+      ((a - b) / 5**0.5).to_i
     end
-    puts
+  end
+
+  def self.fibonacci(number)
+    yield Formula.formula_binet(number)
   end
 end
