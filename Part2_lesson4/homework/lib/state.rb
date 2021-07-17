@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
 class State
-  def status
-    @@state
-  end
-  
   def melt
     @state = Liquid.new
   end
@@ -31,43 +27,43 @@ class State
 
   class Solid
     def status
-      @@state
+      state = 'solid'
     end
 
     def melt
-      @@state = Liquid.new
+      @state = Liquid.new
     end
 
     def sublime
-      @@state = Gas.new
+      @state = Gas.new
     end
   end
 
   class Liquid
     def status
-      @@state
+      @state = 'liquid'
     end
 
     def freezze
-      @@state = Solid.new
+      @state = Solid.new
     end
 
     def boil
-      @@state = Gas.new
+      @state = Gas.new
     end
   end
 
   class Gas
     def status
-      @@state
+      @state = 'gas'
     end
 
     def condense
-      @@state = Liquid.new
+      @state = Liquid.new
     end
 
     def deposit
-      @@state = Solid.new
+      @state = Solid.new
     end
   end
 end

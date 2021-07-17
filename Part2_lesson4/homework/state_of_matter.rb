@@ -4,7 +4,8 @@ require_relative 'lib/state'
 
 substance = State.new.melt
 
-puts substance
+puts substance.status
 puts substance.freezze
+puts substance.freezze.status
 puts new = substance.freezze.sublime
 puts new.status
