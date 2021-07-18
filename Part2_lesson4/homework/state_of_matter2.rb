@@ -1,4 +1,8 @@
-require 'rubygems'
-require 'bundler/setup'
+require_relative 'lib/matter'
 
-Bundler.require(:default)
+one = Matter.new
+puts one.status
+one.melt
+puts one.status
+one.boil
+puts one.status
