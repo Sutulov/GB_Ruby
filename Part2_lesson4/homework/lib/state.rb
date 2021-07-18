@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Class change state of matter
 class State
   def melt
     @state = Liquid.new
@@ -25,9 +26,10 @@ class State
     @state = Solid.new
   end
 
+  # Class defining the behavior of a solid
   class Solid
     def status
-      state = 'solid'
+      @state = 'solid'
     end
 
     def melt
@@ -39,6 +41,7 @@ class State
     end
   end
 
+  # Class defining the behavior of a liquid
   class Liquid
     def status
       @state = 'liquid'
@@ -53,6 +56,7 @@ class State
     end
   end
 
+  # Class defining the behavior of a gas
   class Gas
     def status
       @state = 'gas'
