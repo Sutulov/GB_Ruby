@@ -1,9 +1,5 @@
 require_relative 'lib/user'
 
-user = User.new
-arr = User.input
-user.surname = arr.first
-user.name = arr[2]
-user.patronymic = arr.last
+user = User.new(surname: 'Петров', name: 'Иван', patronymic: 'Владимирович')
 
 puts "#{user.surname} #{user.name} #{user.patronymic}"

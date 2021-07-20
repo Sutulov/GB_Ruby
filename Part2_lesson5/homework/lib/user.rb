@@ -1,8 +1,10 @@
+# Class user
 class User
-  attr_accessor @surname, @name, @patronymic
+  attr_accessor :surname, :name, :patronymic
 
-  def self.input
-    print 'Введите ФИО через пробел: '
-    Arr.new(*gets.chomp)
+  def initialize(surname:, name:, patronymic:)
+    @surname = surname
+    @name = name
+    @patronymic = patronymic
   end
 end
