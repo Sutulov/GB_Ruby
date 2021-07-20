@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class HelloWorld
 end
 
@@ -6,4 +8,4 @@ def HelloWorld.greeting
 end
 
 puts HelloWorld.greeting
-puts HelloWorld::greeting
+puts HelloWorld.greeting

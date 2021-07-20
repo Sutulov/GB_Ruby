@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class HelloWorld
   def greeting
     'Hello, world!'

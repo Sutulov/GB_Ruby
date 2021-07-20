@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Rainbow
   COLORS = {
     red: 'красный',
@@ -7,7 +9,7 @@ class Rainbow
     blue: 'голубой',
     indigo: 'синий',
     violet: 'фиолетовый'
-  }
+  }.freeze
 
   def method_missing(name)
     COLORS[name]

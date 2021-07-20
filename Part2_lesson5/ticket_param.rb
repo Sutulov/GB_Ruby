@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'lib/ticket'
 
 first = Ticket.new(date: Time.mktime(2021, 7, 21, 10, 20))

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'storage'
 
 class Settings
@@ -5,6 +7,7 @@ class Settings
     @obj = Storage.new
     yield @obj
   end
+
   def method_missing(name)
     @obj.params[name]
   end

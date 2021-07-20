@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 class Ticket
   attr_accessor :price
+
   def initialize(price: 500)
     @price = price
   end

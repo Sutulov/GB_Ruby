@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ticket = Object.new
 
 class << ticket

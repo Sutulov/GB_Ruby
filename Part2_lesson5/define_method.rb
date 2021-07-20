@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class HelloWorld
   define_method :cube do |arg|
-    arg ** 3
+    arg**3
   end
 end
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Shop
   def method_missing(m, *args)
     print 'Название метода: '
