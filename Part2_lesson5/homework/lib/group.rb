@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Class for grouping users
 class Group
   def initialize(*users)

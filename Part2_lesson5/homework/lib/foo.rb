@@ -1,4 +1,6 @@
-# Class food definition 
+# frozen_string_literal: true
+
+# Class food definition
 class Foo
   def initialize(methods = {})
     @methods = methods

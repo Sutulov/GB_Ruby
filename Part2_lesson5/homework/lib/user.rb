@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Class user
 class User
   attr_accessor :surname, :name, :patronymic

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Class greeting
 class Hello
   def initialize(str)
@@ -5,6 +7,6 @@ class Hello
   end
 
   def say
-    "Hello, #{@str}!"    
+    "Hello, #{@str}!"
   end
 end
