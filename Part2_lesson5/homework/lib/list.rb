@@ -7,6 +7,6 @@ class List
   end
 
   def each
-    yield @params
+    @params.each { |par| yield par }
   end
 end
