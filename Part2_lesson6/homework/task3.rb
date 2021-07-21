@@ -1,5 +1,5 @@
 STR = 'Возьмите текст этого задания и извлеките из него все слова, количество символов в которых
 больше 5. Подсчитайте количество слов и выведите их алфавитном порядке.'.freeze
 
-p arr = STR.split.select { |str| str.size > 5 }.sort
-p arr.count
+puts arr = STR.split(/[\w'-]+|[ \n.,!?]+/).select { |str| str.size > 5 }.map { |str| str.downcase }.sort
+puts arr.count
