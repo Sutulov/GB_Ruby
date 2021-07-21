@@ -1,6 +1,0 @@
-AllCops:
-  TargetRubyVersion: 3.0.2
-  Exclide:
-    - 'tmp/**/*'
-Style/MissingRespondToMissing:
-  Enabled: false

@@ -6,7 +6,7 @@ class List
     @params = params
   end
 
-  def each
-    @params.each { |par| yield par }
+  def each(&block)
+    @params.each(&block)
   end
 end
