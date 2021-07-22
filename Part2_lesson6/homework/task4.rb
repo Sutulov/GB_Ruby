@@ -4,4 +4,7 @@ STR = "Возьмите текст этого задания и извлекит
 'и'. Сформируйте из них список уникальных слов и выведите их в порядке увеличения
 количества символов в слове."
 
-puts STR.split.select { |str| str.start_with? 'и' }.uniq.sort_by(&:size)
+puts STR.split(/[\s\n.,!?'-]+/)
+        .select { |str| str.start_with? 'и' }
+        .uniq
+        .sort_by(&:size)
