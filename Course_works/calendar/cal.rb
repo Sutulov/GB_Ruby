@@ -1,13 +1,27 @@
 DAY = 86_400
 today =  Time.now
-puts today.strftime '    %B %Y'
+# puts today.strftime '    %B %Y'
+MONTHS = { Jan: 'Январь',
+           Feb: 'Февраль',
+           Mar: 'Март',
+           Apr: 'Апрель',
+           May: 'Май',
+           Jun: 'Июнь',
+           Jul: 'Июль',
+           Aug: 'Август',
+           Sep: 'Сентябрь',
+           Oct: 'Октябрь',
+           Mov: 'Ноябрь',
+           Dec: 'Декабрь' }.freeze
+
+puts "    #{MONTHS[(today.strftime '%b').to_sym]} #{today.year}"
 n = (Time.now.strftime '%e').to_i
 day = today - n * DAY
-month = Array.new(7, []) 
 week = %w[пн вт ср чт пт сб вс]
-month = week.zip(month)
+month = Array.new(7, [])
+month = week.zip(month).map { |arr| arr.reject!(&:empty?) }
 start = ((day + DAY).strftime '%u').to_i - 2
-(0..start).each { |i|  month[i] << '  ' }
+(0..start).each { |i|  month[i] << ' ' }
 (1..31).each do |i|
    day += DAY
   case day.strftime '%u'
@@ -27,5 +41,5 @@ start = ((day + DAY).strftime '%u').to_i - 2
     month.last << ' ' + day.day.to_s
   end
 end
-
-month.map { |arr| puts arr.join }
+(6..6).each { |i|  month[i] << ' ' }
+month.map { |arr| puts format("% 3s\% 3s\% 3s\% 3s\% 3s\% 3s" % arr) }
