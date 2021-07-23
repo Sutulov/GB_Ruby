@@ -6,7 +6,8 @@ day = today - n * DAY
 month = Array.new(7, []) 
 week = %w[пн вт ср чт пт сб вс]
 month = week.zip(month)
-
+start = ((day + DAY).strftime '%u').to_i - 2
+(0..start).each { |i|  month[i] << '  ' }
 (1..31).each do |i|
    day += DAY
   case day.strftime '%u'
