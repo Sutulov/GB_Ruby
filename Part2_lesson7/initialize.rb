@@ -8,3 +8,5 @@ class Ticket
 end
 
 p Ticket.instance_methods(false)
+p Ticket.instance_methods
+p Ticket.methods
