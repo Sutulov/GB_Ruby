@@ -4,10 +4,7 @@
 class User
   attr_accessor :surname, :name, :patronymic, :email
 
-  def initialize(surname:, name:, patronymic:, email:)
-    @surname = surname
-    @name = name
-    @patronymic = patronymic
-    @email = email
+  def initialize
+    yield self
   end
 end

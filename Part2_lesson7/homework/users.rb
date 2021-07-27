@@ -2,6 +2,11 @@
 
 require_relative 'lib/user'
 
-user = User.new(surname: 'Петров', name: 'Иван', patronymic: 'Владимирович', email: 'pochta@ya.ru')
+first = User.new do |user|
+  user.surname = 'Петров'
+  user.name = 'Иван'
+  user.patronymic = 'Владимирович'
+  user.email = 'pochta@ya.ru'
+end
 
-puts "#{user.surname} #{user.name} #{user.patronymic} #{user.email}"
+puts "#{first.surname} #{first.name} #{first.patronymic} #{first.email}"
