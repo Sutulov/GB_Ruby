@@ -1,21 +1,10 @@
 require 'date'
-DAY = 86_400
+require_relative 'lib/data'
 today =  Time.now
 last_day = Date.new(today.year, today.month, -1).day
 last_week_day = (Date.new(today.year, today.month, -1).strftime '%u').to_i
-# puts today.strftime '    %B %Y'
-MONTHS = { Jan: 'Январь',
-           Feb: 'Февраль',
-           Mar: 'Март',
-           Apr: 'Апрель',
-           May: 'Май',
-           Jun: 'Июнь',
-           Jul: 'Июль',
-           Aug: 'Август',
-           Sep: 'Сентябрь',
-           Oct: 'Октябрь',
-           Mov: 'Ноябрь',
-           Dec: 'Декабрь' }.freeze
+
+
 
 puts "    #{MONTHS[(today.strftime '%b').to_sym]} #{today.year}"
 n = (Time.now.strftime '%e').to_i
