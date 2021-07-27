@@ -17,6 +17,10 @@ MONTHS = { Jan: 'Январь',
            Dec: 'Декабрь' }.freeze
 
   def arr_month(start, month, last_day, day)
+    last_day = Date.new(today.year, today.month, -1).day
+    last_week_day = (Date.new(today.year, today.month, -1).strftime '%u').to_i
+    n = (Time.now.strftime '%e').to_i
+day = today - n * DAY
     (0..start).each { |i|  month[i] << ' ' }
     (1..last_day).each do |i|
        day += DAY

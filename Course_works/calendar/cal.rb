@@ -1,10 +1,7 @@
 require_relative 'lib/data'
 
 today =  Time.now
-last_day = Date.new(today.year, today.month, -1).day
-last_week_day = (Date.new(today.year, today.month, -1).strftime '%u').to_i
-n = (Time.now.strftime '%e').to_i
-day = today - n * DAY
+
 week = %w[пн вт ср чт пт сб вс]
 month = Array.new(7, [])
 month = week.zip(month).map { |arr| arr.reject!(&:empty?) }
