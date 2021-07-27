@@ -1,5 +1,8 @@
+require 'date'
 DAY = 86_400
 today =  Time.now
+last_day = Date.new(today.year, today.month, -1).day
+last_week_day = (Date.new(today.year, today.month, -1).strftime '%u').to_i
 # puts today.strftime '    %B %Y'
 MONTHS = { Jan: 'Январь',
            Feb: 'Февраль',
@@ -22,7 +25,7 @@ month = Array.new(7, [])
 month = week.zip(month).map { |arr| arr.reject!(&:empty?) }
 start = ((day + DAY).strftime '%u').to_i - 2
 (0..start).each { |i|  month[i] << ' ' }
-(1..31).each do |i|
+(1..last_day).each do |i|
    day += DAY
   case day.strftime '%u'
   when '1'
@@ -41,5 +44,6 @@ start = ((day + DAY).strftime '%u').to_i - 2
     month.last << ' ' + day.day.to_s
   end
 end
-(6..6).each { |i|  month[i] << ' ' }
+
+(last_week_day..6).each { |i|  month[i] << ' ' }
 month.map { |arr| puts format("% 3s\% 3s\% 3s\% 3s\% 3s\% 3s" % arr) }
