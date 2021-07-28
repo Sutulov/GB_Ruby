@@ -19,25 +19,6 @@ MONTHS = { Jan: 'Январь',
 class Month
   DAY = 86_400
 
-  def self.sort_arr(week_day, month, day)
-    case week_day
-    when '1'
-      month.first << " #{day.day}"
-    when '2'
-      month[1] << " #{day.day}"
-    when '3'
-      month[2] << " #{day.day}"
-    when '4'
-      month[3] << " #{day.day}"
-    when '5'
-      month[4] << " #{day.day}"
-    when '6'
-      month[5] << " #{day.day}"
-    when '7'
-      month.last << " #{day.day}"
-    end
-  end
-
   today = Time.now
   week = %w[пн вт ср чт пт сб вс]
   month = Array.new(7, [])
@@ -52,7 +33,7 @@ class Month
     (0..@start).each { |i| @month[i] << ' ' }
     (1..@last_day).each do |_i|
       @day += DAY
-      Month.sort_arr((@day.strftime '%u'), @month, @day)
+      @month[(@day.strftime '%u').to_i - 1] << " #{@day.day}"
     end
     (@last_week_day..6).each { |i| @month[i] << ' ' }
     @month
