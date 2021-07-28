@@ -38,21 +38,23 @@ class Month
     end
   end
 
-  def self.arr_month(today)
-    week = %w[пн вт ср чт пт сб вс]
-    month = Array.new(7, [])
-    month = week.zip(month).map { |arr| arr.reject!(&:empty?) }
-    n = (Time.now.strftime '%e').to_i
-    day = today - n * DAY
-    start = ((day + DAY).strftime '%u').to_i - 2
-    last_day = Date.new(today.year, today.month, -1).day
-    last_week_day = (Date.new(today.year, today.month, -1).strftime '%u').to_i
-    (0..start).each { |i| month[i] << ' ' }
-    (1..last_day).each do |_i|
-      day += DAY
-      Month.sort_arr((day.strftime '%u'), month, day)
+  today = Time.now
+  week = %w[пн вт ср чт пт сб вс]
+  month = Array.new(7, [])
+  @month = week.zip(month).map { |arr| arr.reject!(&:empty?) }
+  n = (Time.now.strftime '%e').to_i
+  @day = today - n * DAY
+  @start = ((@day + DAY).strftime '%u').to_i - 2
+  @last_day = Date.new(today.year, today.month, -1).day
+  @last_week_day = (Date.new(today.year, today.month, -1).strftime '%u').to_i
+
+  def self.arr_month
+    (0..@start).each { |i| @month[i] << ' ' }
+    (1..@last_day).each do |_i|
+      @day += DAY
+      Month.sort_arr((@day.strftime '%u'), @month, @day)
     end
-    (last_week_day..6).each { |i| month[i] << ' ' }
-    month
+    (@last_week_day..6).each { |i| @month[i] << ' ' }
+    @month
   end
 end

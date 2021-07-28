@@ -5,7 +5,7 @@ require_relative 'lib/data'
 today = Time.now
 
 puts "     #{MONTHS[(today.strftime '%b').to_sym]} #{today.year}"
-month = Month.arr_month(today)
+month = Month.arr_month
 month.map do |arr|
   arr.map do |str|
     if str == " #{today.day}"
