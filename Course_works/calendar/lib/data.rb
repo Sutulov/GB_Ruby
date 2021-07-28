@@ -19,23 +19,27 @@ MONTHS = { Jan: 'Январь',
 class Month
   DAY = 86_400
 
-  today = Time.now
-  week = %w[пн вт ср чт пт сб вс]
-  month = Array.new(7, [])
-  @month = week.zip(month).map { |arr| arr.reject!(&:empty?) }
-  n = (Time.now.strftime '%e').to_i
-  @day = today - n * DAY
-  @start = ((@day + DAY).strftime '%u').to_i - 2
-  @last_day = Date.new(today.year, today.month, -1).day
-  @last_week_day = (Date.new(today.year, today.month, -1).strftime '%u').to_i
-
-  def self.arr_month
-    (0..@start).each { |i| @month[i] << ' ' }
-    (1..@last_day).each do |_i|
-      @day += DAY
-      @month[(@day.strftime '%u').to_i - 1] << " #{@day.day}"
+  class << self
+    def data
+      today = Time.now
+      week = %w[пн вт ср чт пт сб вс]
+      month = Array.new(7, [])
+      n = (Time.now.strftime '%e').to_i
+      month = week.zip(month).map { |arr| arr.reject!(&:empty?) }
+      day = today - n * DAY
+      start = ((day + DAY).strftime '%u').to_i - 2
+      last_day = Date.new(today.year, today.month, -1).day
+      [month, day, start, last_day]
     end
-    (@last_week_day..6).each { |i| @month[i] << ' ' }
-    @month
+
+    def arr_month
+      month, day, start, last_day = *Month.data
+      (0..start).each { |i| month[i] << ' ' }
+      (1..last_day).each do |_i|
+        day += DAY
+        month[(day.strftime '%u').to_i - 1] << " #{day.day}"
+      end
+      month
+    end
   end
 end
