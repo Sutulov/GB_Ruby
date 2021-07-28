@@ -18,7 +18,7 @@ MONTHS = { Jan: 'Январь',
 # Class prepares month
 class Month
   DAY = 86_400
-  
+
   def self.sort_arr(week_day, month, day)
     case week_day
     when '1'
