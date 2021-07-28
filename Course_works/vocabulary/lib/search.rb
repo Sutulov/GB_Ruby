@@ -6,12 +6,12 @@ class Search
     open('lib/vocabulary.txt') do |f|
       @word2 = f.read
     end
-    @arr = []
+    arr = []
     @word2.split.map do |str|
       return str if str == word.upcase
 
-      @arr << str if str.start_with?(word.upcase)
+      arr << str if str.start_with?(word.upcase)
     end
-    @arr.empty? ? 'Нет такого слова' : @arr
+    arr.empty? ? 'Нет такого слова' : arr
   end
 end
