@@ -12,8 +12,6 @@ class Search
 
       @arr << str if str.start_with?(word.upcase)
     end
-    return 'Нет такого слова' if @arr.empty?
-
-    @arr
+    @arr.empty? ? 'Нет такого слова' : @arr
   end
 end
