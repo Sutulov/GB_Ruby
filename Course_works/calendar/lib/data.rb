@@ -18,18 +18,15 @@ MONTHS = { Jan: 'Январь',
 # Class prepares month
 class Month
   DAY = 86_400
+  WEEK = %w[пн вт ср чт пт сб вс].freeze
 
   class << self
     def data
-      today = Time.now
-      week = %w[пн вт ср чт пт сб вс]
-      month = Array.new(7, [])
-      n = (Time.now.strftime '%e').to_i
-      month = week.zip(month).map { |arr| arr.reject!(&:empty?) }
-      day = today - n * DAY
+      month = WEEK.zip(Array.new(7, [])).map { |arr| arr.reject!(&:empty?) }
+      day = Time.now - (Time.now.strftime '%e').to_i * DAY
       start = ((day + DAY).strftime '%u').to_i - 2
-      last_day = Date.new(today.year, today.month, -1).day
-      [month, day, start, last_day]
+      last_day = Date.new(Time.now.year, Time.now.month, -1)
+      [month, day, start, last_day.day]
     end
 
     def arr_month
