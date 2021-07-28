@@ -5,9 +5,17 @@ class Search
       @word2 = f.read
     end
     @arr = []
-    @word2.split.map do |str| 
-      @arr << str if str.downcase.start_with?(word.downcase)  
+    @word2.split.map do |str|
+      if str == word.upcase 
+        return str
+      else
+        @arr << str if str.start_with?(word.upcase)
+      end
     end
-    @arr
+    if @arr.empty?
+      'Нет такого слова'
+    else 
+      @arr
+    end
   end
 end
