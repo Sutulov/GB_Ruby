@@ -6,11 +6,8 @@ class Search
     open('lib/vocabulary.txt') do |f|
       @word2 = f.read
     end
-    arr = []
-    @word2.split.map do |str|
-      return str if str == word.upcase
-
-      arr << str if str.start_with?(word.upcase)
+    arr = @word2.split.select do |str|
+      str == word.upcase ? (return str) : str.start_with?(word.upcase)
     end
     arr.empty? ? 'Нет такого слова' : arr
   end
