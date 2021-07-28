@@ -4,11 +4,9 @@
 class Search
   def self.words(word)
     open('lib/vocabulary.txt') do |f|
-      @word2 = f.read
+      @word2 = f.read.split.select { |str| str.start_with?(word.upcase) }
     end
-    arr = @word2.split.select do |str|
-      str == word.upcase ? (return str) : str.start_with?(word.upcase)
-    end
+      arr = @word2.each { |str| return str if str == word.upcase }
     arr.empty? ? 'Нет такого слова' : arr
   end
 end
