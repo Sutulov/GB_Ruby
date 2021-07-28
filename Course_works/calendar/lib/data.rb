@@ -17,23 +17,23 @@ MONTHS = { Jan: 'Январь',
 
 # Class prepares month
 class Month
-  DAY = 86_400
+  ONE_DAY = 86_400
   WEEK = %w[пн вт ср чт пт сб вс].freeze
+  LAST_DAY = Date.new(Time.now.year, Time.now.month, -1).day
 
   class << self
     def data
       month = WEEK.zip(Array.new(7, [])).map { |arr| arr.reject!(&:empty?) }
-      day = Time.now - (Time.now.strftime '%e').to_i * DAY
-      start = ((day + DAY).strftime '%u').to_i - 2
-      last_day = Date.new(Time.now.year, Time.now.month, -1)
-      [month, day, start, last_day.day]
+      day = Time.now - (Time.now.strftime '%e').to_i * ONE_DAY
+      start = ((day + ONE_DAY).strftime '%u').to_i - 2
+      [month, day, start]
     end
 
     def arr_month
-      month, day, start, last_day = *Month.data
+      month, day, start = *Month.data
       (0..start).each { |i| month[i] << ' ' }
-      (1..last_day).each do |_i|
-        day += DAY
+      (1..LAST_DAY).each do |_i|
+        day += ONE_DAY
         month[(day.strftime '%u').to_i - 1] << " #{day.day}"
       end
       month
