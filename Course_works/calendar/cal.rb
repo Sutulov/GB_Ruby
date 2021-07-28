@@ -6,4 +6,9 @@ today = Time.now
 
 puts "    #{MONTHS[(today.strftime '%b').to_sym]} #{today.year}"
 month = Month.arr_month(today)
-month.map { |arr| puts format("% 3s\e[32m% 3s\% 3s\% 3s\% 3s\% 3s\e[0m" % arr) }
+month.map do |arr|
+  arr.map do |str|
+    print format('%3s', str)
+  end
+  puts
+end
