@@ -1,21 +1,19 @@
+# frozen_string_literal: true
+
 # Class for search in file
 class Search
   def self.words(word)
-    open("lib/vocabulary.txt") do |f|
+    open('lib/vocabulary.txt') do |f|
       @word2 = f.read
     end
     @arr = []
     @word2.split.map do |str|
-      if str == word.upcase 
-        return str
-      else
-        @arr << str if str.start_with?(word.upcase)
-      end
+      return str if str == word.upcase
+
+      @arr << str if str.start_with?(word.upcase)
     end
-    if @arr.empty?
-      'Нет такого слова'
-    else 
-      @arr
-    end
+    return 'Нет такого слова' if @arr.empty?
+
+    @arr
   end
 end
