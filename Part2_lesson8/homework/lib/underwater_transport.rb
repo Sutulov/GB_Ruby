@@ -1,5 +1,5 @@
 require_relative 'ship'
 
 class UnderwaterTransport < Ship
-  attr_accessor :depth
+  attr_accessor :immersion_depth
 end
