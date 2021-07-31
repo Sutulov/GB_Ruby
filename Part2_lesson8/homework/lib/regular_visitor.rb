@@ -1,4 +1,4 @@
 require_relative 'user'
 
-class RegularVisitor
+class RegularVisitor < User
 end

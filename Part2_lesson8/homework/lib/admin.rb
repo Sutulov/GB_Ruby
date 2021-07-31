@@ -1,5 +1,5 @@
 require_relative 'user'
 
 class Admin < User
-  attr_accessor
+  attr_accessor :access_level
 end
