@@ -1,7 +1,11 @@
 class Person
-  remove_method :new
+  attr_accessor :surname, :name, :patronymic 
 
-  attr_accessor :surname, :name, :patronymic
+  class << Person
+    private :new
+  end
+
+
 end
 
 class Admin < Person
