@@ -1,14 +1,17 @@
 class Person
-  attr_accessor :surname, :name, :patronymic 
 
-  class << Person
-    private :new
+  def Person.new
+    self == Person if private :new
   end
 
+  attr_accessor :surname, :name, :patronymic 
+
+  
 
 end
 
 class Admin < Person
+
 end
 
 class User < Person
