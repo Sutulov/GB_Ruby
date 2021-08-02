@@ -2,6 +2,7 @@
 
 require_relative 'user'
 
+# Class of Moderators
 class Moderator < User
   attr_accessor :access_level
 end

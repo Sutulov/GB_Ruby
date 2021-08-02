@@ -9,11 +9,14 @@ class Person
   end
 end
 
+# Class of Admins
 class Admin < Person
 end
 
+# Class of Users
 class User < Person
 end
 
+# Class of Moderators
 class Moderator < Person
 end
