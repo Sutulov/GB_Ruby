@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 %w[moderator admin author regular_visitor].each do |file|
   require_relative "lib/#{file}"
 end

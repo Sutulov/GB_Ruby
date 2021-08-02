@@ -1,5 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'lib/evolution'
 
-puts n = Animals.new
-puts x = People.new
-p arr = Array.new(7, *HomoSapiens.ancestors)
+puts Array.new(7) { |i| HomoSapiens.ancestors[i].new }

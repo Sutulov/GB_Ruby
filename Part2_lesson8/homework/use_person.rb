@@ -1,6 +1,6 @@
+# frozen_string_literal: true
+
 require_relative 'lib/person'
-
-
 
 user = Admin.new
 user.surname = 'Петров'

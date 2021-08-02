@@ -1,7 +1,11 @@
+# frozen_string_literal: true
+
+# Class describing site users
 class Person
-  attr_accessor :surname, :name, :patronymic 
+  attr_accessor :surname, :name, :patronymic
+
   def initialize
-    private :new if self.class == Person
+    private :new if instance_of?(Person)
   end
 end
 

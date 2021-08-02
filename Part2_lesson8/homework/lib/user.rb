@@ -1,17 +1,18 @@
+# frozen_string_literal: true
 
 # Class defining users of Web site
 class User
-  attr_accessor :surname, :name, :patronymic, :email, :say
+  attr_accessor :surname, :name, :patronymic, :email
 
   def say
     case self
-    when Moderator 
+    when Moderator
       @say = 'модератор'
-    when RegularVisitor 
+    when RegularVisitor
       @say = 'обычный посетитель'
-    when Author 
+    when Author
       @say = 'автор материала'
-    when Admin 
+    when Admin
       @say = 'администратор'
     end
   end

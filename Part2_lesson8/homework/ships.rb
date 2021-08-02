@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'lib/dry_cargo'
 
 ship = DryCargo.new
