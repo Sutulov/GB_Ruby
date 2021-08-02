@@ -9,6 +9,6 @@ user.patronymic = 'Владимирович'
 
 p user
 
-# user2 = Person.new
+user2 = Person.new
 
-# p user2
+p user2
