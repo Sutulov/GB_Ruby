@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 require 'singleton'
 
 # Class settings of website
 class Settings
-
   include Singleton
 
   def initialize
