@@ -1,16 +1,12 @@
+# frozen_string_literal: true
+
 class Ticket
   def initialize(date:, price: 500)
     @price = price
     @date = date
   end
 
-  def price
-    @price
-  end
-
-  def date
-    @date
-  end
+  attr_reader :price, :date
 end
 
 ticket = Ticket.new date: Time.new(2021, 7, 30, 10, 20)

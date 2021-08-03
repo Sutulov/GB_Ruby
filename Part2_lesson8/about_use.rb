@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 %w[about news photo_catalog].each do |file|
   require_relative "lib/#{file}"
 end
