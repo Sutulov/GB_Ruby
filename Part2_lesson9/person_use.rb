@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'lib/person'
 
 first = Person.new(name: 'Первый игрок', score: 12)

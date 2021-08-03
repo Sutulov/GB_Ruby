@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 puts Object.public_send(:object_id)
 
 CONST = 1

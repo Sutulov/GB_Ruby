@@ -1,12 +1,10 @@
+# frozen_string_literal: true
+
 require_relative 'lib/ticket'
 
 class TicketChild < Ticket
   def price
     price_format(@price)
-  end
-
-  def number
-    super
   end
 end
 

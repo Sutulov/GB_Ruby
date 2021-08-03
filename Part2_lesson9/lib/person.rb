@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Person
   attr_accessor :name
 
@@ -6,13 +8,11 @@ class Person
     @score = score
   end
 
-  def <=>(person)
-    score <=> person.score
+  def <=>(other)
+    score <=> other.score
   end
 
   protected
 
-  def score
-    @score
-  end
+  attr_reader :score
 end

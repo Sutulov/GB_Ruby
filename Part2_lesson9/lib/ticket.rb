@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 class Ticket
   attr_accessor :price, :date
+
   @@next_number = 1
 
   def initialize(date:, price: 500)
@@ -9,8 +12,8 @@ class Ticket
     @@next_number += 1
   end
 
-  def <=>(ticket)
-    number <=> ticket.number
+  def <=>(other)
+    number <=> other.number
   end
 
   def price
@@ -25,7 +28,5 @@ class Ticket
 
   protected
 
-  def number
-    @number
-  end
+  attr_reader :number
 end

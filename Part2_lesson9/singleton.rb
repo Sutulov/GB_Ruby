@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Singleton
   def self.instance
     @@obj ||= new

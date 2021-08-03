@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Ticket
   @@count = 0
 
@@ -12,8 +14,6 @@ class Ticket
   def self.report
     "Продано билетов: #{count}"
   end
-
-  private
 
   def self.count
     @@count

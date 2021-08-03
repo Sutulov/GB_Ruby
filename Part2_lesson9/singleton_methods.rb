@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Ticket
   @@count = 0
 
@@ -10,7 +12,6 @@ class Ticket
   end
 
   class << self
-
     def report
       "Продано билетов: #{count}"
     end
