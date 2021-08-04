@@ -33,7 +33,7 @@ class HydrometeorologicalСenter < Subject
     @observers.each { |observer| observer.update(self) }
   end
 
-  def some_business_logic
+  def forecast
     @state = rand(-30..40)
 
     puts "Завтра ожидаем температуру равную: #{@state}"

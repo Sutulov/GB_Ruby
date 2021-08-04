@@ -8,9 +8,12 @@ weather.attach(ministry_emergency_situations)
 school = School.new
 weather.attach(school)
 
-weather.some_business_logic
-weather.some_business_logic
+road_service = RoadService.new
+weather.attach(road_service)
+
+weather.forecast
+weather.forecast
 
 weather.detach(ministry_emergency_situations)
 
-weather.some_business_logic
+weather.forecast
