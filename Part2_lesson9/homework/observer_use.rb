@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require_relative 'lib/observer'
 
-weather = HydrometeorologicalСenter.new
+weather = HydrometeorologicalCenter.new
 
 ministry_emergency_situations = MinistryEmergencySituations.new
 weather.attach(ministry_emergency_situations)
