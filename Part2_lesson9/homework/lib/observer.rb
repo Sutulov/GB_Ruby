@@ -20,16 +20,17 @@ class HydrometeorologicalСenter < Subject
   end
 
   def attach(observer)
-    puts 'Subject: Attached an observer.'
+    puts 'Прикреплен наблюдатель'
     @observers << observer
   end
 
   def detach(observer)
+    puts 'Открикреплен наблюдатель'
     @observers.delete(observer)
   end
 
   def notify
-    puts 'Subject: Notifying observers...'
+    puts 'Уведомление наблюдателей'
     @observers.each { |observer| observer.update(self) }
   end
 
