@@ -60,11 +60,11 @@ class School < Observer
   def update(subject)
     puts 'Завтра младшие классы не учатся' if subject.state < -15  
   end
+end
 
-  class RoadService < Observer
+class RoadService < Observer
 
-    def update(subject)
-      puts 'Завтра надо обработать улицы противогололедным средством!' if (subject.state > -3 && subject.state < 0)
-    end
+  def update(subject)
+    puts 'Завтра надо обработать улицы противогололедным средством!' if (subject.state > -3 && subject.state < 0)
   end
 end
