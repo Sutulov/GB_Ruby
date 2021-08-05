@@ -1,21 +1,26 @@
+# frozen_string_literal: true
 
-class Component
+# Class Signature
+class Signature
   def operation
     raise NotImplementedError, "#{self.class} has not implemented method '#{__method__}'"
   end
 end
 
-class ConcreteComponent < Component
+# Class approval from Engineer
+class EngineerSignature < Signature
   def operation
-    'ConcreteComponent'
+    'EngineerSignature'
   end
 end
 
-class Decorator < Component
+# Class signing of documents
+class Signing < Signature
   attr_accessor :component
 
   def initialize(component)
     @component = component
+    super
   end
 
   def operation
@@ -23,22 +28,20 @@ class Decorator < Component
   end
 end
 
-class ConcreteDecoratorA < Decorator
+# Class approval from Lead Engineer
+class LeadEngineerSignature < Signing
   def operation
-    "ConcreteDecoratorA(#{@component.operation})"
+    "LeadEngineerSignature(#{@component.operation})"
   end
 end
 
-class ConcreteDecoratorB < Decorator
- def operation
-    "ConcreteDecoratorB(#{@component.operation})"
+# Class approval from Superintendent
+class SuperintendentSignature < Signing
+  def operation
+    "SuperintendentSignature(#{@component.operation})"
   end
 end
 
-def client_code(component)
-  # ...
-
-  print "RESULT: #{component.operation}"
-
-  # ...
+def approval(component)
+  "RESULT: #{component.operation}"
 end

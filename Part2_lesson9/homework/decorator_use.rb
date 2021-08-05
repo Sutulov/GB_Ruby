@@ -1,9 +1,10 @@
+# frozen_string_literal: true
+
 require_relative 'lib/decorator'
 
+simple = EngineerSignature.new
+puts approval(simple)
 
-simple = ConcreteComponent.new
-client_code(simple)
-
-decorator1 = ConcreteDecoratorA.new(simple)
-decorator2 = ConcreteDecoratorB.new(decorator1)
-client_code(decorator2)
+lead_engineer = LeadEngineerSignature.new(simple)
+superintendent = SuperintendentSignature.new(lead_engineer)
+puts approval(superintendent)
