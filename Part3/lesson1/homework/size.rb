@@ -1,0 +1,1 @@
+arr = File.open(ARGV.first, 'w')
