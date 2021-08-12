@@ -12,7 +12,7 @@ module Size
     elsif size > KILO**3
       "#{(size / (KILO**3)).round(1)} G"
     else
-      "#{size.round} bytes"
+      "#{size} bytes"
     end
   end
 end
