@@ -1,16 +1,16 @@
 # frozen_string_literal: true
-KILO = 1024
+KILO = 1024.0
 
 module Size
   def self.performance(size)
     if size > KILO && size < KILO * KILO
-      "#{size / 1024} K"
+      "#{(size / KILO).round(1)} K"
     elsif size > KILO ** 2 && size < KILO ** 3
-      "#{size / (KILO ** 2)} M"
+      "#{(size / (KILO ** 2)).round(1)} M"
     elsif size > KILO ** 3
-      "#{size / (KILO ** 3)} G"
+      "#{(size / (KILO ** 3)).round(1)} G"
     else
-      "#{size} bytes"
+      "#{size.round} bytes"
     end
   end
 end
