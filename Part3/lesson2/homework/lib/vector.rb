@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Class for vectors
 class Vector
   attr_accessor :x1, :y1, :x2, :y2
@@ -11,7 +13,7 @@ class Vector
 
   # Class for points
   class Point
-    attr_accessor :x,  :y
+    attr_accessor :x, :y
 
     def initialize(x, y)
       @x = x
