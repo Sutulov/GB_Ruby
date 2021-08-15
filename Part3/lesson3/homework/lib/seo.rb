@@ -13,7 +13,7 @@ class Seo
     end
 
     def data
-      [@title, @description, @keywords]      
+      { title: @title, description: @description, keywords: @keywords }     
     end
   end
 end
