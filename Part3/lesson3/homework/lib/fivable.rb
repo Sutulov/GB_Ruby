@@ -1,18 +1,20 @@
 module Fivable
-  @@cunter = 0
+  @@counter = 0
 
-  def self.instance
+  def instance
     if @@counter == 5
-      'Для этого класса уже создано 5 объектов!
-      Это максимум!'
+      puts 'Для этого класса уже создано 5 объектов. Это максимум!'
     else
       self.new
-      @@cunter += 1
+      @@counter += 1
     end
   end
 
-  protected :self.new
-  alias dump instance
-  alias clone dump
-  # alias dump self.instance)
+  protected
+
+  def self.new
+    super
+  end
+
+  alias clone dup
 end

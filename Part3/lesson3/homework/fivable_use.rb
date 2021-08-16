@@ -1,7 +1,7 @@
 require_relative 'lib/fivable'
 
 class Page
-  include Fivable
+  extend Fivable
 end
 
 news = Page.instance
