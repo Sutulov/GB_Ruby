@@ -6,6 +6,6 @@ class Integer
   include RomanNumbers
 end
 
-p 5.roman
-p 16.roman
-p 23.roman
+puts 5.roman
+puts 16.roman
+puts 23.roman

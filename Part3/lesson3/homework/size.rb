@@ -32,4 +32,4 @@ end
 include Size
 
 path = File.join('.')
-p performance(scan(path))
+puts performance(scan(path))
