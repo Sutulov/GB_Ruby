@@ -7,13 +7,13 @@ class Page
   include Fivable
 end
 
-p news = Page.instance
-p about = Page.instance
-p main = Page.instance
-p chat = Page.instance
-p sitting = Page.instance
+puts news = Page.instance
+puts about = Page.instance
+puts main = Page.instance
+puts chat = Page.instance
+puts sitting = Page.instance
 puts users = Page.instance
-p test = chat.dup
-p test = chat.clone
+puts test = chat.dup
+puts test = chat.clone
 puts test = Page.instance
-p test = Page.new
+puts test = Page.new
