@@ -1,0 +1,10 @@
+AllCops:
+  TargetRubyVersion: 3.0.2
+  Exclide:
+    - 'tmp/**/*'
+Lint/UselessMethodDefinition:
+  Enabled: false
+Lint/UselessAssignment:
+  Enabled: false
+Style/MixinUsage:
+  Enabled: false

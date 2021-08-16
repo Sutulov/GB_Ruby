@@ -1,12 +1,16 @@
+# frozen_string_literal: true
+
+# Module limiting object creation
 module Fivable
-    module ClassMethods
-    @@counter = 0
+  # Module for add class methods
+  module ClassMethods
     def instance
-      if @@counter == 5
+      @counter ||= 0
+      if @counter == 5
         puts 'Для этого класса уже создано 5 объектов. Это максимум!'
       else
-        @@counter += 1
-        self.new   
+        @counter += 1
+        new
       end
     end
 

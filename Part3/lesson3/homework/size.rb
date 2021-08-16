@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Mosule determining the size of all files
 module Size
   KILO = 1024.0
 
@@ -11,7 +12,7 @@ module Size
 
     entries.reduce(0) do |counter, item|
       counter += scan(item) if File.directory?(item)
-      counter += (File.extname(item) == '.rb') ? File.size(item) : 0
+      counter += File.size(item)
     end
   end
 
