@@ -29,7 +29,7 @@ module Size
   end
 end
 
-extend Size
+include Size
 
 path = File.join('.')
 p performance(scan(path))
