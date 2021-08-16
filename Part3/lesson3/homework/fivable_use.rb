@@ -1,12 +1,17 @@
 require_relative 'lib/fivable'
 
 class Page
-  extend Fivable
+  extend Fivable::ClassMethods
+  include Fivable
 end
 
-news = Page.instance
-about = Page.instance
-main = Page.instance
-chat = Page.instance
-sitting = Page.instance
-users = Page.instance
+p news = Page.instance
+p about = Page.instance
+p main = Page.instance
+p chat = Page.instance
+p sitting = Page.instance
+p users = Page.instance
+p test = chat.dup
+p test = chat.clone
+p test = Page.instance
+p test = Page.new
