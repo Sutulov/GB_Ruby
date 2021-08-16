@@ -7,14 +7,14 @@ module Fivable
     def instance
       @counter ||= 0
       if @counter == 5
-        puts 'Для этого класса уже создано 5 объектов. Это максимум!'
+        'Для этого класса уже создано 5 объектов. Это максимум!'
       else
         @counter += 1
         new
       end
     end
 
-    protected
+    private
 
     def new
       super
