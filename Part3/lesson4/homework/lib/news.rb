@@ -1,3 +1,4 @@
+# Class news
 class News
   include Comparable
   attr_accessor :title, :body, :date
