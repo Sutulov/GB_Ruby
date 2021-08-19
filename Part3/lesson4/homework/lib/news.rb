@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Class news
 class News
   include Comparable
@@ -9,7 +11,7 @@ class News
     @date = date
   end
 
-  def <=>(news)
-    date <=> news.date
+  def <=>(other)
+    date <=> other.date
   end
 end
