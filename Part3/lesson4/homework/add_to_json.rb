@@ -2,7 +2,8 @@
 class Hash
   def to_json(*_args)
     json = '{'
-    each { |key, value| json << " \"#{key}\": \"#{value}\", " }
+    each { |key, value| json << "\"#{key}\":\"#{value}\"," }
+    json.delete_suffix!(",")
     json << '}'
   end
 end
