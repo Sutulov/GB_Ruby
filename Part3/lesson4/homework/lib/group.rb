@@ -14,11 +14,9 @@ class Group
   end
 
   def add(fio, position)
-    if @users.key?(fio)
-      puts 'Этот работник у нас уже работает!'
-    else
-      User.new(fio, position).user { |key, value| @users[key] = value }
-    end
+    raise 'Этот работник у нас уже работает!' if @users.key?(fio)
+
+    User.new(fio, position).user { |key, value| @users[key] = value }
   end
 
   # Class user
