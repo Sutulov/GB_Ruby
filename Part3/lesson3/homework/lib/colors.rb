@@ -12,11 +12,9 @@ COLORS = {
 
 # Module open of Kernel
 module Kernel
-  def method_missing(name)
-    COLORS[name]
-  end
-
-  def respond_to_missing?(method_name, include_private = false)
-    methods.keys.include?(method_name) || super
+  COLORS.each do |name, value|
+    define_method(name) do
+      value
+    end
   end
 end
