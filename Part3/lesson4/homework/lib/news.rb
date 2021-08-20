@@ -12,6 +12,6 @@ class News
   end
 
   def <=>(other)
-    date <=> other.date
+    date <=> other
   end
 end
