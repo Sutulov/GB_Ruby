@@ -7,10 +7,12 @@ class Cube
   @@cubes = {}
 
   def initialize(coordinates)
-    raise 'Уже есть такой куб!' if @@cubes.key?(coordinates)
-
-    @cube = coordinates
-    Item.new(coordinates).cube { |key| @@cubes[key] = 1 }
+    if @@cubes.key?(coordinates)
+      @@cubes.each { |key, value| @cube = value if coordinates == key }
+    else
+      @cube = Item.new(coordinates)
+      @cube.cube { |key| @@cubes[key] = @cube }
+    end
   end
 
   # Class Item
