@@ -6,11 +6,20 @@ module Str
     end
 
     def check(line)
-      if String === line 
-        line
-      else
+      
+      if line == line.to_i.to_s
         raise 'Цифры, пробелы, знаки препинания — не допускаются!'
+      else
+        line
       end
+
+      # if String === line 
+      #   line
+      # elsif line == line.to_i.to_s
+      #   line
+      # else
+      #   raise 'Цифры, пробелы, знаки препинания — не допускаются!'
+      # end
     end
 
     def output
