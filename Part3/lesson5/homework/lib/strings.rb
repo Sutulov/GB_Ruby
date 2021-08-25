@@ -1,8 +1,15 @@
 module Str
   attr_accessor :lines
+
   class << self
     def input
-      @lines = (0..2).each_with_object([]) { |i, lines| lines << check(gets.chomp) }
+      @lines = (0..3).each_with_object({}) do |i, lines| 
+                                            if lines.key?(str = check(gets.chomp))
+                                              lines[str] += 1
+                                            else
+                                              lines[str] = 1
+                                            end
+                                          end
     end
 
     def check(line)
@@ -15,7 +22,13 @@ module Str
     end
 
     def output
-      @lines
+      @lines.sort.each do |key, value| 
+                         if value > 1
+                           puts "#{key}(#{value})"
+                         else
+                          puts key
+                         end
+                       end
     end
   end
 end
