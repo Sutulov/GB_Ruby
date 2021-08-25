@@ -4,6 +4,8 @@
 module Str
   attr_accessor :lines
 
+  ERROR = 'Цифры, пробелы, знаки препинания — не допускаются!'
+
   class << self
     def input
       @lines = (0..3).each_with_object({}) do |_i, lines|
@@ -16,11 +18,9 @@ module Str
     end
 
     def check(line)
-      if line == line.to_i.to_s || line.scan(/[, .;:!]+?/) != []
-        raise 'Цифры, пробелы, знаки препинания — не допускаются!'
-      else
-        line
-      end
+      raise ERROR if line == line.to_i.to_s || line.scan(/[, .;:!?]/) != []
+
+      line
     end
 
     def output
