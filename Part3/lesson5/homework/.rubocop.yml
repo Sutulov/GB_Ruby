@@ -4,3 +4,5 @@ AllCops:
     - 'tmp/**/*'
 Style/ClassVars:
   Enabled: false
+Style/MixinUsage:
+  Enabled: false
