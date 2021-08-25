@@ -24,11 +24,11 @@ module Str
     end
 
     def output
-      @lines.sort.each do |key, value|
+      @lines.sort.map do |key, value|
         if value > 1
-          puts "#{key}(#{value})"
+          "#{key}(#{value})"
         else
-          puts key
+          key.to_s
         end
       end
     end
