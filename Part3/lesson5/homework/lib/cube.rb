@@ -11,7 +11,7 @@ class Cube
       @@cubes.each { |key, value| @cube = value if coordinates == key }
     else
       @cube = Item.new(coordinates)
-      @cube.cube { |key| @@cubes[key] = @cube }
+      @cube.coors { |key| @@cubes[key] = @cube }
     end
   end
 
@@ -23,7 +23,7 @@ class Cube
       @coordinates = coordinates
     end
 
-    def cube
+    def coors
       yield coordinates
     end
   end
