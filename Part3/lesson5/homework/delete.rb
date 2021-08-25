@@ -1,1 +1,3 @@
-FileUtils.rm_r Dir.glob('/tmp/*')
+require 'fileutils'
+
+FileUtils.rm_r Dir.glob('./tmp/*')
