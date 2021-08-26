@@ -1,4 +1,2 @@
-arr = Dir['*.rb']
-puts arr
-%x(cat task01.rb)
-%x(echo hi)
+arr = Dir['*.png']
+puts arr[rand(0..arr.size - 1)]
