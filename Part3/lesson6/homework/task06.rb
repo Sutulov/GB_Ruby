@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
+# Class Integer
 class Integer
   def to_a
-    (('%b' % self).split '').map(&:to_i)
+    ((format('%b', self)).split '').map(&:to_i)
   end
 end
 

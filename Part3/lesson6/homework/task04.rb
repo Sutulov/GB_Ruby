@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
+# Class Array
 class Array
-  def for(n = 'x')
-    loop { yield self } if n == 'x'
-    (0..n-1).each { yield self }
+  def for(par = 'x')
+    loop { yield self } if par == 'x'
+    (0..par - 1).each { yield self }
   end
 end
 

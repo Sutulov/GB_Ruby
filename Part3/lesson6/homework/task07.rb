@@ -1,12 +1,15 @@
+# frozen_string_literal: true
+
+# Class Integer
 class Integer
-  def to_a(x = 'x')
-    case x
+  def to_a(par = 'x')
+    case par
     when 'x'
-      (('%b' % self).split '').map(&:to_i)
+      ((format('%b', self)).split '').map(&:to_i)
     when 8
-      (('%o' % self).split '').map(&:to_i)
+      ((format('%o', self)).split '').map(&:to_i)
     when 16
-      (('%x' % self).split '').map { |x| x }
+      ((format('%x', self)).split '').map { |item| item }
     else
       raise 'Only parameters "8" and "16" are supported!'
     end
