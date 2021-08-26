@@ -5,6 +5,6 @@ matrix = [
 [7, 5, 6, 7]
 ]
 p matrix
-sum = 0
-matrix.each_with_index {  |item, i| sum += item[i] }
-puts sum
+trace = 0
+matrix.each_with_index {  |item, i| trace += item[i] }
+puts trace
