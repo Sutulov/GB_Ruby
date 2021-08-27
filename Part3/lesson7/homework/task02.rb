@@ -9,6 +9,4 @@ colors = {
   indigo: 'синий',
   violet: 'фиолетовый'
 }
-p rus = colors.values.map(&:to_sym)
-p eng = colors.keys.map(&:to_s)
-p rus.zip(eng).to_h
+p colors.each_with_object({}) { |(k, v), new| new[v.to_sym] = k.to_s }
