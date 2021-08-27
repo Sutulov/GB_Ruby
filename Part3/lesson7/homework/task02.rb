@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 colors = {
   red: 'красный',
   orange: 'оранжевый',
@@ -7,6 +9,6 @@ colors = {
   indigo: 'синий',
   violet: 'фиолетовый'
 }
-p rus = colors.values
-p eng = colors.keys
-p new = rus.zip(eng).to_h
+p rus = colors.values.map(&:to_sym)
+p eng = colors.keys.map(&:to_s)
+p rus.zip(eng).to_h
