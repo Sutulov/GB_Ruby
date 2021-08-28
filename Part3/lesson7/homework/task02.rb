@@ -9,4 +9,7 @@ colors = {
   indigo: 'синий',
   violet: 'фиолетовый'
 }
+
+p colors.values
+p colors.keys.map(&:to_s)
 p colors.each_with_object({}) { |(k, v), new| new[v.to_sym] = k.to_s }
