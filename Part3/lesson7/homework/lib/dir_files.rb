@@ -10,7 +10,7 @@ module DirFiles
       if File.directory?(item)
         scan(item)
         else
-        puts item
+        puts item.split('/').last
       end
     end
   end
