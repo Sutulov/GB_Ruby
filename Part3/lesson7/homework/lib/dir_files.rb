@@ -1,4 +1,6 @@
-# module to define all directories
+# frozen_string_literal: true
+
+# module find files
 module DirFiles
   def scan(folder)
     entries = Dir.new(folder)
@@ -6,18 +8,16 @@ module DirFiles
                  .reject { |x| %w[. ..].include? x }
                  .map { |x| File.join(folder, x) }
 
+    entr(entries)
+  end
+
+  def entr(entries)
     entries.each do |item|
       if File.directory?(item)
         scan(item)
-        else
+      else
         puts item.split('/').last
       end
-    end
-  end
-  def files
-    Dir['*'].reject { |x| x.include? '.' }.each do |folder|
-      puts "Каталок: #{folder}\nCодержит следующие файлы:"
-      scan(folder)
     end
   end
 end
