@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
 require 'set'
 
+# Class keywords
 class Keywords
   attr_accessor :set
 
-  def initialize(item)
+  def initialize
     @set = Set.new
     add
   end
@@ -14,7 +17,7 @@ class Keywords
   end
 end
 
-keywords = Keywords.new(gets.chomp)
+keywords = Keywords.new
 
 keywords.add
 p keywords
