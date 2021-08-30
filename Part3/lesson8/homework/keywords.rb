@@ -1,25 +1,20 @@
 require 'set'
 
 class Keywords
-<<<<<<< HEAD
-  attr_accessor: :set
+  attr_accessor :set
 
-  def initialize(keyword)
-    @set = keyword
-=======
   def initialize(item)
     @set = Set.new
-    @set << item.downcase
+    add
   end
 
-  def =(item)
+  def add
     print 'Введите keyword: '
-    @set << item.downcase
->>>>>>> main
+    @set << gets.chomp.downcase
   end
 end
 
-print 'Введите keyword: '
 keywords = Keywords.new(gets.chomp)
 
+keywords.add
 p keywords
