@@ -1,12 +1,24 @@
 require 'ostruct'
-submarine = []
-missile_cruiser = []
-military_transport = []
-(0..2).each do
-  submarine << OpenStruct.new(missiles: rand(20), torpedoes: rand(20), cell: [rand(10), rand(10)]),
-  missile_cruiser << OpenStruct.new missiles: rand(20)),
-  military_transport << OpenStruct.new cargo_hold: 1000, crane: 500
+require 'set'
+
+address = Set.new
+while address.size < 9 do
+  address << [rand(1..10), rand(1..10)]
 end
-p submarine
-p missile_cruiser
-p military_transport
+new = address.to_a
+p address
+ 
+def self.cells
+  [rand(1..10), rand(1..10)]
+end
+
+arr = (0..2).each_with_object([]) do |i, ships|
+  ships.concat([
+    ('submarine_' +  (i + 1).to_s) => OpenStruct.new(missiles: rand(20), torpedoes: rand(20), cell: cells),
+    ('missile_cruiser_' +  (i + 1).to_s) => OpenStruct.new(missiles: rand(20), cell: cells),
+    ('military_transport_' +  (i + 1).to_s) => OpenStruct.new(cargo_hold: 1000, crane: 500, cell: cells)
+  ])
+end
+
+
+p arr
