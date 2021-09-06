@@ -6,13 +6,13 @@ end
 # Class defining users
 class User
   attr_accessor :surname, :name, :patronymic, :email
-  def name
-    raise UserException.new ('Ошибка') if @name == 'Alex'
-  end
+
+  raise UserException.new ('Ошибка') if p @email
+  p self::email
 end
 
 first = User.new
 
-first.name = 'Alex'
+first.email = 'Alex'
 
 p first
