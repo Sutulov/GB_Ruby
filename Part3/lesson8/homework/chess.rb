@@ -1,5 +1,13 @@
-arr = Array.new(8) { |x| x = [] }
+arr = Array.new(8) { |a| a = Array.new(8) { |x| x = 0 }}
 
-arr.each_with_index { |x, i| (0..7).each_with_index {|n, j| x << [i + 1 , j + 1] }  }
+def check(item)
+  result = 1
+  result = nil if p item.sum == 1
+  result
+end
+
+arr.each_with_index do |item, i|
+  item[i] = 1 if check(item)
+end
 
 p arr
