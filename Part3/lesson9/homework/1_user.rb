@@ -1,20 +1,22 @@
 # frozen_string_literal: true
 
+# Class UserException
 class UserException < Exception
 end
 
 # Class defining users
 class User
+  VALID_EMAIL_REGEX = /\A[\w+\-]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   attr_accessor :surname, :name, :patronymic, :email
 
   def initialize
     yield self
+    raise UserException.new('Ошибка ввода!') if check
+  end
 
+  def check
     str = surname + name + patronymic
-
-    raise UserException.new('Ошибка ввода!') if str[/[a-zA-Z0-9_\-+ ]/]
-     # || !email.match(/^[а-яА-Я]+@^[а-яА-Я]+\.^[а-яА-Я]+/)
-p email.match(/[a-zA-Z0-9_]+@[a-zA-Z0-9_]+\.[^а-яА-Я]+/)
+    str[/[a-zA-Z0-9_\-+ ]/] || !(email =~ VALID_EMAIL_REGEX)
   end
 end
 
@@ -22,7 +24,7 @@ first = User.new do |user|
   user.surname = 'Петров'
   user.name = 'Иван'
   user.patronymic = 'Владимирович'
-  user.email = 'pochta@yaа.ru'
+  user.email = 'pochta@mail.ru'
 end
 
 p first
