@@ -18,9 +18,15 @@ class SolarSystem
       value
     end
   end
+  
+  def method_missing(method, *_args)
+    raise NotExistingPlanetException, 'Такой планета нет!'
+  end
 end
 
 planets = SolarSystem.new
 p planets.mars
 p planets.pluto
+p planets.fluton
+
 
