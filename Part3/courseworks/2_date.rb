@@ -1,5 +1,3 @@
-File.open('notrise.jpeg') do |file|
-  puts file.gets
-  puts file.gets
-  puts file.gets
-end
+require 'exifr/jpeg'
+
+puts EXIFR::JPEG.new('lib/test.jpeg').date_time
