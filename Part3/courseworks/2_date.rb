@@ -1,3 +1,3 @@
-require 'exifr'
-p File.stat('test.jpeg').ctime
-p EXIFR::JPEG.new('test.jpeg').date_time
+require 'exifr/jpeg'
+
+p EXIFR::JPEG.new('lib/test.jpeg').date_time
