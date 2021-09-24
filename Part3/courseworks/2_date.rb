@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'exifr/jpeg'
 
 puts EXIFR::JPEG.new('lib/ruby.jpg').date_time

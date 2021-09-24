@@ -22,6 +22,6 @@ module DirFiles
   end
 end
 
-include DirFiles
+# include DirFiles
 
 scan('.')
