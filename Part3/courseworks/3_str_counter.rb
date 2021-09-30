@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
 def counting(item)
-  count = 0
   File.open(item, 'r') do |f|
-    f.each { |_line| count += 1 }
-    puts "Строк в файле #{item}: #{count}"
+    counter = f.reduce(0) { |count, _line| count + 1 }
+    puts "Строк в файле #{item}: #{counter}"
   end
 end
 
