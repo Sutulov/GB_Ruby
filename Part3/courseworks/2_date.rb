@@ -2,4 +2,4 @@
 
 require 'exifr/jpeg'
 
-p EXIFR::JPEG.new('lib/app1.jpg').date_time
+puts EXIFR::JPEG.new('lib/app1.jpg').date_time
