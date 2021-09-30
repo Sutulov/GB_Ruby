@@ -1,27 +1,24 @@
 # frozen_string_literal: true
 
-# module find files
-module DirFiles
-  def scan(folder)
-    entries = Dir.new(folder)
-                 .entries
-                 .reject { |x| %w[. ..].include? x }
-                 .map { |x| File.join(folder, x) }
-
-    counter(entries)
-  end
-
-  def counter(entries)
-    entries.each do |item|
-      if File.directory?(item)
-        scan(item)
-      else
-        File.write(item, File.read(item))
-      end
-    end
+def counting(item)
+  count = 0
+  File.open(item, 'r') do |f|
+    f.each { |_line| count += 1 }
+    puts "Строк в файле #{item}: #{count}"
   end
 end
 
-# include DirFiles
+def scan(path)
+  entries = Dir.new(path)
+               .entries
+               .reject { |x| %w[. ..].include? x }
+               .map { |x| File.join(path, x) }
 
-scan('.')
+  entries.each do |item|
+    scan(item) if File.directory?(item)
+    counting(item) if File.extname(item) == '.rb'
+  end
+end
+
+path = File.join('.')
+scan(path)
