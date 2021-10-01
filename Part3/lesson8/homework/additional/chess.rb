@@ -10,4 +10,4 @@ arr.each_with_index do |item, i|
   item[i] = 1 if check(item)
 end
 
-p arr
+arr.each { |i| p i }
