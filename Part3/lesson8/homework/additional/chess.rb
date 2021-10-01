@@ -10,24 +10,40 @@ end
 
 def diagonal(i, j)
   trace = 0
+  m = j
+  n = i
   (i..7).each do |i|
-    @arr[i[j]]
-    j += 1
+    trace += @arr[i][j]
+    j += 1 if j < 7
   end
-  trace != 0
+
+  (0...m).each do |j|
+    p "n #{n}"
+    p "m #{m}"
+    trace += @arr[n][j]
+    n += 1
+  end
+
+  trace != 1
 end
 
 def check(i, j)
   if line(@arr[i]) && column(j) && diagonal(i, j)
     j
+  elsif j > 7
+    check(i, 0)
   else
-    j += 1
-    check(i, j)
+    if j < 7
+      j += 1
+      check(i, j)
+    end
   end
 end
 
 @arr.each_with_index do |item, i|
-  item[check(i, 0)] = 1
+  if check(i, 0)
+    item[check(i, 0)] = 1
+  end
 end
 
 @arr.each { |i| p i }
