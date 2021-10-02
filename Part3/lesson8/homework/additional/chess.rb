@@ -12,6 +12,7 @@ def diagonal(i, j)
   trace = 0
   m = j
   n = i
+  n -= 1 if i = 1
   (i..7).each do |i|
     p trace += @arr[i][j]
     j += 1 if j < 7
@@ -24,7 +25,7 @@ def diagonal(i, j)
     n += 1 if n < 7
   end
   p "11 #{@arr[0][0]}"
-  trace == 0
+  p trace < 1
 end
 
 def check(i, j)
