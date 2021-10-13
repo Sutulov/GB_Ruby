@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-puts file_name = 'test.txt'
+puts file_name = 'test1.txt'
 puts "File exists: #{File.exist? file_name}"
-raise 'The file must be more than 10 bytes!' if (size = File.size(file_name)) < 10
+raise 'The file must be more than 10 bytes!' if File.exist? file_name || (size = File.size(file_name)) < 10
 
 if File.exist? file_name
   new_size = (size / 10.0).ceil
