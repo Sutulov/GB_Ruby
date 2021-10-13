@@ -11,7 +11,7 @@ end
 raise 'The file must exist and it must be more than 10 bytes!' if check(file_name)
 
 def write(num, data, name)
-  File.open(format("#{name}x%02d", num), 'w') { |f| f.write data }
+  File.open(format("%sx%02d", name, num), 'w') { |f| f.write data }
 end
 
 
