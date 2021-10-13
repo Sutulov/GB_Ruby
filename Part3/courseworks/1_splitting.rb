@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+PARTS = 10.0
 puts file_name = 'test.txt'
 puts "File exists: #{File.exist? file_name}"
 
@@ -14,11 +15,11 @@ def write(num, data, name)
 end
 
 
-new_size = (File.size(file_name) / 10.0).ceil
+new_size = (File.size(file_name) / PARTS).ceil
 step = 0
 
 str = File.read(file_name)
-  (0..9).each do |i|
+  (0...PARTS).each do |i|
     data = str[step, new_size]
     write(i + 1, data, file_name)
     step += new_size
