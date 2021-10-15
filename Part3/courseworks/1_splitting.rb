@@ -9,19 +9,18 @@ def check(name)
   File.exist?(name) && File.size(name) > 9
 end
 
-raise 'The file must exist and it must be more than 10 bytes!' if !check(file_name)
+raise 'The file must exist and it must be more than 10 bytes!' unless check(file_name)
 
 def write(num, data, name)
-  File.open(format("%s%s%02d", name, FORMAT, num), 'w') { |f| f.write data }
+  File.open(format('%<name>s%<format>s%<num>02d', name: name, format: FORMAT, num: num), 'w') { |f| f.write data }
 end
-
 
 new_size = (File.size(file_name) / PARTS).ceil
 step = 0
 
 str = File.read(file_name)
-  (0...PARTS).each do |i|
-    data = str[step, new_size]
-    write(i + 1, data, file_name)
-    step += new_size
-  end
+(0...PARTS).each do |i|
+  data = str[step, new_size]
+  write(i + 1, data, file_name)
+  step += new_size
+end
