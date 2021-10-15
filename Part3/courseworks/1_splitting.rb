@@ -5,10 +5,10 @@ puts file_name = 'test.txt'
 puts "File exists: #{File.exist? file_name}"
 
 def check(name)
-  !File.exist? name || File.size(file_name) < 10
+  File.exist?(name) && File.size(name) > 9
 end
 
-raise 'The file must exist and it must be more than 10 bytes!' if check(file_name)
+raise 'The file must exist and it must be more than 10 bytes!' if !check(file_name)
 
 def write(num, data, name)
   File.open(format("%sx%02d", name, num), 'w') { |f| f.write data }
