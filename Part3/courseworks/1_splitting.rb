@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 PARTS = 10.0
+FORMAT = 'x'
 puts file_name = 'test.txt'
 puts "File exists: #{File.exist? file_name}"
 
@@ -11,7 +12,7 @@ end
 raise 'The file must exist and it must be more than 10 bytes!' if !check(file_name)
 
 def write(num, data, name)
-  File.open(format("%sx%02d", name, num), 'w') { |f| f.write data }
+  File.open(format("%s%s%02d", name, FORMAT, num), 'w') { |f| f.write data }
 end
 
 
