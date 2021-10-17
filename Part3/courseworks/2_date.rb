@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
-require 'exifr/jpeg'
+require 'rubygems'
+require 'bundler/setup'
 
-puts EXIFR::JPEG.new('lib/app1.jpg').date_time
+Bundler.require(:default)
+
+puts EXIFR::JPEG.new('data/app1.jpg').date_time
