@@ -1,11 +1,13 @@
 # frozen_string_literal: true
 
 EXTENSION = '.rb'
+@common_counter = 0
 
 def counting(item)
   File.open(item, 'r') do |f|
     counter = f.reduce(0) { |count, _line| count + 1 }
     puts "Строк в файле #{item}: #{counter}"
+    @common_counter += counter
   end
 end
 
@@ -23,3 +25,4 @@ end
 
 path = File.join('.')
 scan(path)
+puts "Общее число строк = #{@common_counter}"
