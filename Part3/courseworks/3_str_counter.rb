@@ -22,7 +22,7 @@ def scan(path)
     counting(item) if File.extname(item) == EXTENSION
   end
 end
-
-path = File.join('.')
+puts 'Введите адрес каталога для сканирования: '
+path = File.join(gets.chomp)
 scan(path)
 puts "Общее число строк = #{@common_counter}"
