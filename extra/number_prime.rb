@@ -3,4 +3,4 @@ def isPrime(num)
   !(num < 1) 
 end
 
-isPrime(gets.chomp)
+p isPrime(gets.chomp.to_i)
