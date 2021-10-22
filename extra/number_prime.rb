@@ -6,7 +6,7 @@ def isPrime(num)
    end
   end
 
-  true
+  num >= 1
 end
 
 p isPrime(gets.chomp.to_i)
