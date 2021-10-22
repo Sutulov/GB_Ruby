@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 CONST = 100_000
 
 # Test if number is prime
