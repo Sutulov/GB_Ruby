@@ -2,7 +2,13 @@
 
 # Test if number is prime
 def prime(num)
-  (2...num).each do |d|
+  n = if num > 100_000
+        100_000
+      else
+        num
+      end
+
+  (2...n).each do |d|
     return false if (num % d).zero?
   end
 
