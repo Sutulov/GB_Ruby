@@ -6,7 +6,7 @@ def prime(num)
     return false if (num % d).zero?
   end
 
-  num >= 1
+  num > 1
 end
 
 puts prime(gets.chomp.to_i)
