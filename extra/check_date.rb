@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'date'
 
 day = Time.utc(Time.now.year)
 puts day
-puts  day.strftime('%u')
+puts day.strftime('%u')
 
 # print 'Введите номер недели: '
 # week_num = gets.to_i

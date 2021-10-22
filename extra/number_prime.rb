@@ -2,7 +2,7 @@
 
 # Test if number is prime
 def prime(num)
-  (2..(num - 1)).each do |d|
+  (2...num).each do |d|
     return false if (num % d).zero?
   end
 
