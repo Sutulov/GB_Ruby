@@ -1,12 +1,12 @@
+# frozen_string_literal: true
+
 # Test if number is prime
-def isPrime(num)
-  for d in 2..(num - 1)
-   if (num % d) == 0
-    return false
-   end
+def prime(num)
+  (2..(num - 1)).each do |d|
+    return false if (num % d).zero?
   end
 
   num >= 1
 end
 
-p isPrime(gets.chomp.to_i)
+puts prime(gets.chomp.to_i)
