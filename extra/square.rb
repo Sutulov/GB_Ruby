@@ -1,6 +1,8 @@
-def find_next_square(sq)
-  if Math.sqrt(sq) % 1 == 0.0
-    ((sq**0.5 + 1)**2).to_i
+# frozen_string_literal: true
+
+def find_next_square(squ)
+  if Math.sqrt(squ) % 1 == 0
+    ((squ**0.5 + 1)**2).to_i
   else
     -1
   end
