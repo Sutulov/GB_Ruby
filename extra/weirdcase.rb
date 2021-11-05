@@ -5,9 +5,9 @@ def weirdcase(string)
     if n.size == 1
       n.upcase!
     else
-      (0...n.size).each { |i| (n[i] = string[i].upcase!) if i.even? }
+      (0...n.size).each { |i| (n[i] = n[i].upcase) if i.even? }
     end
-  end
+  end.join(' ')
 end
 
 p weirdcase(gets.chomp)
