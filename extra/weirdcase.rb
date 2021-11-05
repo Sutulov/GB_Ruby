@@ -1,5 +1,13 @@
+# frozen_string_literal: true
+
 def weirdcase(string)
-  string.split.each { |n| n.upcase! }
+  string.split.each do |n|
+    if n.size == 1
+      n.upcase!
+    else
+      (0...n.size).each { |i| (n[i] = string[i].upcase!) if i.even? }
+    end
+  end
 end
 
 p weirdcase(gets.chomp)
