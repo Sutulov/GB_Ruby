@@ -13,4 +13,4 @@ def rgb(r, g, b)
   transform(r) + transform(g) + transform(b)
 end
 
-puts rgb(0, 0, 0)
+puts rgb(300, 0, 18)
