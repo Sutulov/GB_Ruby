@@ -1,6 +1,7 @@
 def pick_peaks(arr)
   has = {'pos' => [], 'peaks' => []}
   arr.chunk_while {|i, j| i <= j }.to_a.reduce(0) { |sum, a|
+    a.uniq!
     sum = sum + a.length
     if a.length > 1
       has['peaks'] << a.last
