@@ -8,8 +8,10 @@ def pick_peaks(arr)
     end
     sum
   }
-  has['pos'].pop
-  has['peaks'].pop
+  if arr.last >= arr[arr.length - 2]
+    has['pos'].pop
+    has['peaks'].pop
+  end
   has
 end
 
