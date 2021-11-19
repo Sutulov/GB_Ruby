@@ -1,15 +1,7 @@
 # frozen_string_literal: true
 
 def zeros(num)
-  sum = 0
-  if num > 4
-    loop do
-      num /= 5
-      sum += num
-      break unless num % 5 >= 1 || num > 4
-    end
-  end
-  sum
+  num < 5 ? 0 : (num / 5) + zeros(num / 5)
 end
 
 puts zeros(gets.chomp.to_i)
