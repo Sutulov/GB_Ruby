@@ -1,12 +1,18 @@
+# frozen_string_literal: true
+
 def score(dice)
-  (1..6).reduce(0) { |sum, num|
-    if dice.count(num) > 2
-      sum += num * 100
-    elsif (num == 1 || num == 5) && dice.any?(num) && dice.count(num) != 3
-      sum += num * 10
+  (1..6).reduce(0) do |sum, num|
+    sum += num * 100 if dice.count(num) > 2 && num > 1
+    case num
+    when 5
+      sum += 50 * (dice.count(5) - 3) if dice.count(5) > 3
+      sum += 50 * dice.count(5) if dice.count(5) < 3
+    when 1
+      sum += 100 * (dice.count(1) - 3) + 1000 if dice.count(1) > 2
+      sum += 100 * dice.count(1) if dice.count(1) < 3
     end
     sum
-  }
+  end
 end
 
-p score([2, 4, 4, 5, 4])
+p score([5, 5, 5, 5, 1])
