@@ -6,6 +6,7 @@ class Chain
 
   def call(n)
     @n += n
+    self
   end
 
   def sum(n)
@@ -20,4 +21,4 @@ end
 
 puts add(gets.chomp.to_i)
 p add(1)
-p add(1).(2)
+p add(1).(2).(1)
