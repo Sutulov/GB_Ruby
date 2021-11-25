@@ -1,6 +1,5 @@
+# frozen_string_literal: true
+
 require 'faraday'
 
-response = Faraday.get('https://gb.ru/courses')
-puts response.status
-p response.headers
-puts response.body.size
+puts Faraday.get('https://gb.ru/courses').body.lines.reduce(0) { |sum, _i| sum + 1 }
