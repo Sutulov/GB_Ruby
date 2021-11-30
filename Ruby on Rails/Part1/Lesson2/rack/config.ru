@@ -12,6 +12,8 @@ class App
         body = 'Not Found'
       end
 
+      headers['Content-Length'] = body.length.to_s
+
       [code, headers, [body]]
     end
 
