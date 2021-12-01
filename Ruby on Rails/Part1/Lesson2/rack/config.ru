@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 require 'rack'
 
+# Class App
 class App
   class << self
     def call(env)
@@ -19,16 +22,16 @@ class App
 
     def template(name)
       <<~HTML
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <title>#{name}</title>
-          <meta charset="utf-8" />
-        </head>
-        <body>
-          <h1>#{name}</h1>
-        </body>
-      </html>
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <title>#{name}</title>
+            <meta charset="utf-8" />
+          </head>
+          <body>
+            <h1>#{name}</h1>
+          </body>
+        </html>
       HTML
     end
   end
