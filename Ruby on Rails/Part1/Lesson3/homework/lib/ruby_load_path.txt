@@ -1,0 +1,8 @@
+/home/alex/.rvm/rubies/ruby-3.0.3/lib/ruby/site_ruby/3.0.0
+/home/alex/.rvm/rubies/ruby-3.0.3/lib/ruby/site_ruby/3.0.0/x86_64-linux
+/home/alex/.rvm/rubies/ruby-3.0.3/lib/ruby/site_ruby
+/home/alex/.rvm/rubies/ruby-3.0.3/lib/ruby/vendor_ruby/3.0.0
+/home/alex/.rvm/rubies/ruby-3.0.3/lib/ruby/vendor_ruby/3.0.0/x86_64-linux
+/home/alex/.rvm/rubies/ruby-3.0.3/lib/ruby/vendor_ruby
+/home/alex/.rvm/rubies/ruby-3.0.3/lib/ruby/3.0.0
+/home/alex/.rvm/rubies/ruby-3.0.3/lib/ruby/3.0.0/x86_64-linux
