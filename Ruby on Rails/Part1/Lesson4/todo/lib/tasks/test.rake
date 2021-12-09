@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # test:hello
 
 namespace :test do

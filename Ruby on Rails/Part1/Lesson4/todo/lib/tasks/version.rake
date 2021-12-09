@@ -1,4 +1,6 @@
+# frozen_string_literal: true
+
 desc 'Версия Ruby on Rails'
-task ver: [:environment, :datetime] do
+task ver: %i[environment datetime] do
   puts Rails.version
 end
