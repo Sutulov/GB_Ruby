@@ -10,15 +10,13 @@ task :number_of_lines do
 
     entries.reduce(0) do |counter, item|
       counter += scan(item) if File.directory?(item)
+      count = 0
       if File.extname(item) == '.rb'
-        count = 0
         File.open(item, 'r') do |f|
-          f.each {  |_line| count += 1 }
+          f.each { |_line| count += 1 }
         end
-      else
-        count = 0
       end
-      counter += count
+      counter + count
     end
   end
 

@@ -10,7 +10,7 @@ task :ruby_files do
 
     entries.reduce(0) do |counter, item|
       counter += scan(item) if File.directory?(item)
-      counter += (File.extname(item) == '.rb') ? 1 : 0
+      counter + (File.extname(item) == '.rb' ? 1 : 0)
     end
   end
 
