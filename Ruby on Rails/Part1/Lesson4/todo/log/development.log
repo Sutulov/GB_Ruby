@@ -5,3 +5,61 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 3022)
 
 
+Started GET "/" for 127.0.0.1 at 2021-12-09 22:43:55 +0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/alex/.rvm/gems/ruby-3.0.3/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/alex/.rvm/gems/ruby-3.0.3/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.8ms | Allocations: 415)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 2298)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-09 22:52:22 +0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/alex/.rvm/gems/ruby-3.0.3/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/alex/.rvm/gems/ruby-3.0.3/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.5ms | Allocations: 415)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 2298)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2021-12-09 22:53:00 +0400
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 128)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-09 22:55:31 +0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/alex/.rvm/gems/ruby-3.0.3/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/alex/.rvm/gems/ruby-3.0.3/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.0ms | Allocations: 209)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 988)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-09 22:55:43 +0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/alex/.rvm/gems/ruby-3.0.3/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/alex/.rvm/gems/ruby-3.0.3/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.0ms | Allocations: 415)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 2298)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2021-12-09 22:55:50 +0400
+Processing by HomeController#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 236)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2021-12-09 23:02:00 +0400
+Processing by HomeController#index as HTML
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 3137)
+
+
+Started GET "/hello" for 127.0.0.1 at 2021-12-09 23:02:07 +0400
+Processing by HomeController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 74)
+
+
+Started GET "/hello" for 127.0.0.1 at 2021-12-09 23:03:21 +0400
+Processing by HomeController#index as HTML
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 3137)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-09 23:03:25 +0400
+Processing by HomeController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 74)
+
+
