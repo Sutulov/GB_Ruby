@@ -63,3 +63,16 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 74)
 
 
+Started GET "/" for 127.0.0.1 at 2021-12-10 11:49:24 +0400
+Processing by HomeController#index as HTML
+@@@@@@@@@@@@@@@@@@@@@@@@@
+Rails
+Мы находимся в HomeController#index
+@@@@@@@@@@@@@@@@@@@@@@@@@
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 4479)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-12-10 11:49:24 +0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
