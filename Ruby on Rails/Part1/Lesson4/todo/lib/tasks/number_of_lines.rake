@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
+EXTENSION = '.rb'
+
 desc 'которая подсчитывает количество строк в ruby-файлах текущего rails-проекта'
 task :number_of_lines do
-  EXTENSION = '.rb'
   @common_counter = 0
 
   def counting(item)
