@@ -1,10 +1,12 @@
 RSpec.describe 'Example' do
-  describe 'should work in case of' do 
+  context 'should work in case of' do 
     it false do
       expect(false).to be_falsy
     end
     it true do
       expect(true).to be_truthy
+    end
+    xit 'postponed' do
     end
   end
 end
