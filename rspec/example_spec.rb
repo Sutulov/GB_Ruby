@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 RSpec.describe 'Example' do
-  context 'should work in case of' do 
+  context 'should work in case of' do
     it false do
       expect(false).to be_falsy
     end
