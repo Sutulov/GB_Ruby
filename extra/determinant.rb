@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def determinant(matrix)
   matrix.flatten!
   matrix[0] * matrix[3] - matrix[1] * matrix[2]

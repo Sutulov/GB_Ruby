@@ -1,34 +1,39 @@
+# frozen_string_literal: true
+
+# class Integer
 class Integer
-    def call(n)
-      a = self + n
-      p a
-      a
-    end
+  def call(num)
+    a = self + num
+    p a
+    a
   end
+end
 
+# class Chain
 class Chain
-  attr_accessor :n
-  def initialize(n)
-    @n ? @n += n : @n = n
+  attr_accessor :num
+
+  def initialize(num)
+    @num ? @num += num : @num = num
   end
 
-  def call(n)
-    @n += n
+  def call(num)
+    @num += num
     self
   end
 
-  def sum(n)
-    @n += n
+  def sum(num)
+    @num += num
   end
 
-  def +(n)
-    @n += n
+  def +(other)
+    @num += other
   end
-
 end
-def add(n)
-  @x ? @x.sum(n) : @x = Chain.new(n)
-  @x::n
+
+def add(num)
+  @x ? @x.sum(num) : @x = Chain.new(num)
+  @x.num
   @x
 end
 
@@ -39,8 +44,8 @@ end
 # p add(5)
 # f = add(1)
 # p f
-addTwo = add(2)
-p addTwo
-p addTwo + 5
-p addTwo(3)
-# addTwo(3).(5)
+add_two = add(2)
+p add_two
+p add_two + 5
+p add_two(3)
+# add_two(3).(5)
