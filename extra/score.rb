@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
+def summ(num, nuf, nur, sum, duf)
+  sum += nuf * (dice.count(num) - 3) + nur if dice.count(num) > duf
+  sum += nuf * dice.count(num) if dice.count(num) < 3
+  sum
+end
+
 def check(num, sum = 0)
-  case num
-  when 5
-    sum += 50 * (dice.count(5) - 3) if dice.count(5) > 3
-    sum += 50 * dice.count(5) if dice.count(5) < 3
-  when 1
-    sum += 100 * (dice.count(1) - 3) + 1000 if dice.count(1) > 2
-    sum += 100 * dice.count(1) if dice.count(1) < 3
-  end
+  summ(num, 50, 0, sum, 3) if num == 5
+  summ(num, 100, 1000, sum, 2) if num == 1
   sum
 end
 
